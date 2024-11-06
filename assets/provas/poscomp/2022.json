@@ -1,0 +1,41 @@
+[
+  {
+    "id": 1,
+    "questão": "Utilize o método de Eliminação de Gauss para resolver o sistema a seguir: -3x + y + z = 1 \n x – 2y + z = 4 \n-x + y − 3z = -7",
+    "alternativas": {
+      "a": "(0, -1, 2)",
+      "b": "(0, 1, 0)",
+      "c": "(2, 0, 2)",
+      "d": "(2, 1, 2)",
+      "e": "(-1, -1, -1)"
+    },
+    "categoria": "1",
+    "gabarito": "a"
+  },
+  {
+    "id": 2,
+    "questão": "Utilize o método de Eliminação de Gauss para resolver o sistema a seguir: -3x + y + z = 1 \n x – 2y + z = 4 \n-x + y − 3z = -7",
+    "alternativas": {
+      "a": "(0, -1, 2)",
+      "b": "(0, 1, 0)",
+      "c": "(2, 0, 2)",
+      "d": "(2, 1, 2)",
+      "e": "(-1, -1, -1)"
+    },
+    "categoria": "1",
+    "gabarito": "a"
+  },
+  {
+    "id": 3,
+    "questão": "Utilize o método de Eliminação de Gauss para resolver o sistema a seguir: -3x + y + z = 1 \n x – 2y + z = 4 \n-x + y − 3z = -7",
+    "alternativas": {
+      "a": "(0, -1, 2)",
+      "b": "(0, 1, 0)",
+      "c": "(2, 0, 2)",
+      "d": "(2, 1, 2)",
+      "e": "(-1, -1, -1)"
+    },
+    "categoria": "1",
+    "gabarito": "a"
+  }
+]

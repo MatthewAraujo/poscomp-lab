@@ -1,4 +1,3 @@
-console.log("hello")
 function iniciarExame(prova) {
-  window.URL.
+  window.location.href = `http://localhost/poscomp-lab/prova.html#${prova}`
 }
