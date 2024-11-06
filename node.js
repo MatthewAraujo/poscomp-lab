@@ -14,74 +14,43 @@ const pdfParse = require('pdf-parse');
 function extractBlockAndQuestion(pdfPath) {
   const pdfBuffer = fs.readFileSync(pdfPath);
 
-  pdfParse(pdfBuffer).then(function (data) {
-    // Extrair o texto bruto do PDF
-    const text = data.text;
-
-    // Extrair o bloco de texto entre os marcadores específicos
-    const block = extractForGabarito(text);
-
-    // Filtrar as linhas que possuem a estrutura "Questão RespostasComponente 1"
+  pdfParse(pdfBuffer).then(data => {
+    const block = extractForGabarito(data.text);
     const questionLines = getGabaritoForPdf(block);
 
-    // Exibir as linhas filtradas
     console.log(questionLines);
-  }).catch(function (error) {
+  }).catch(error => {
     console.error('Erro ao processar o PDF:', error);
   });
 }
 
 function extractForGabarito(text) {
-  // Regex para capturar o texto entre "(*) Questão(ões) anulada(s)" e "Imprimir"
   const pattern = /\(\*\) Questão\(ões\) anulada\(s\) - a pontuação será revertida a todos os candidatos[\s\S]*?Imprimir/g;
-
   const match = text.match(pattern);
 
-  // Verificar se encontramos o bloco correspondente
-  if (match) {
-    return match[0]; // Retorna o primeiro bloco encontrado
-  } else {
-    return "Bloco não encontrado!";
-  }
+  return match ? match[0] : "Bloco não encontrado!";
 }
 
 function getGabaritoForPdf(block) {
-  const lines = block.split("\n");
+  const lines = block.split("\n").filter(line => line.trim() !== "" && !line.includes("ttps://fundatec.org.br/portal/concursos/") && !line.includes("Fundatec") && !line.includes("Imprimir"));
+
   const questionLines = [];
+  let currentQuestion = { question: 0, answer: '', category: '' };
 
-  let questionNumber = 0;
-  let questionAnswer = '';
-  let questionCategory = '';
-
-  lines.forEach((line, index) => {
-    if (line.trim() === "") return;
-    if (line.trim().includes("ttps://fundatec.org.br/portal/concursos/")) return;
-    if (line.trim().includes("Fundatec")) return;
-    if (line.trim().includes("Imprimir")) return;
-
-    if (line.trim().match(/^\d+$/)) {
-      if (questionNumber !== 0) {
-        questionLines.push({
-          question: questionNumber,
-          questionAnswer,
-          questionCategory
-        });
+  lines.forEach(line => {
+    if (/^\d+$/.test(line.trim())) {
+      if (currentQuestion.question !== 0) {
+        questionLines.push(currentQuestion);
       }
-      questionNumber = parseInt(line.trim());
+      currentQuestion = { question: parseInt(line.trim()), answer: '', category: '' };
     } else {
-      console.log(line)
-      questionAnswer = line.split("")[0].trim();
-      questionCategory = line.slice(1).trim();
+      currentQuestion.answer = line.trim().charAt(0);
+      currentQuestion.category = line.trim().slice(1).trim();
     }
   });
 
-  // Adiciona a última questão
-  if (questionNumber !== 0) {
-    questionLines.push({
-      question: questionNumber,
-      questionAnswer,
-      questionCategory
-    });
+  if (currentQuestion.question !== 0) {
+    questionLines.push(currentQuestion);
   }
 
   return questionLines;
