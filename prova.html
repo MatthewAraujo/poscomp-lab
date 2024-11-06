@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POSCOMP-Lab - Exame</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="index.js"></script>
+</head>
+<body class="bg-gray-100 h-screen flex items-center justify-center">
+    <div class="max-w-lg w-full bg-white p-8 rounded-lg shadow-lg">
+        
+        <h1 class="text-3xl font-bold text-gray-800 mb-4 text-center">Simulador POSCOMP</h1>
+        <p class="text-gray-600 mb-6 text-center">
+            Este é o simulador do exame POSCOMP. Você terá a oportunidade de praticar questões de Matemática, Fundamentos da Computação e Tecnologia da Computação. Escolha uma forma de iniciar o exame:
+        </p>
+
+        <div class="mb-6">
+            <h2 class="text-xl font-semibold text-gray-700 mb-2">Distribuição das Questões</h2>
+            <ul class="text-gray-600 space-y-2">
+                <li>Matemática: 20 questões</li>
+                <li>Fundamentos da Computação: 30 questões</li>
+                <li>Tecnologia da Computação: 20 questões</li>
+                <li class="font-semibold text-gray-800">Total: 70 questões</li>
+            </ul>
+        </div>
+
+        <div class="flex flex-col space-y-4">
+            <button onclick="iniciarComTempo()" class="w-full bg-green-500 text-white font-semibold py-3 rounded-lg hover:bg-green-600 transition duration-300">
+                Iniciar com Tempo
+            </button>
+            <button onclick="iniciarSemTempo()" class="w-full bg-blue-500 text-white font-semibold py-3 rounded-lg hover:bg-blue-600 transition duration-300">
+                Iniciar Sem Tempo
+            </button>
+        </div>
+    </div>
+</body>
+</html>
+
