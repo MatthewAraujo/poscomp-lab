@@ -120,26 +120,6 @@ class ExamManager {
     return this.examData.length === Object.keys(localStorage).filter(key => key.startsWith("answer-")).length;
   }
 
-  finishExam() {
-    const correctAnswers = this.examData.reduce((acc, { id, gabarito }) => {
-      return acc + (localStorage.getItem(`answer-${id}`) === gabarito ? 1 : 0);
-    }, 0);
-
-    this.displayFinishPage(correctAnswers);
-  }
-
-  displayFinishPage(correctAnswers) {
-    const appDiv = document.getElementById("app");
-    appDiv.innerHTML = `
-      <div>
-        <h1 class="text-3xl font-bold mb-4">Simulado Finalizado!</h1>
-        <p class="text-xl mb-6">Você acertou ${correctAnswers} de ${this.examData.length} questões.</p>
-        <button class="bg-green-500 text-white py-2 px-4 rounded-lg hover:bg-green-600" onclick="alert('Exibindo resultados detalhados...')">Ver Resultados Detalhados</button>
-        <button class="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 ml-4" onclick="localStorage.clear(); window.location.href = 'http://localhost/poscomp-lab/index.html'">Finalizar Simulado</button>
-      </div>
-    `;
-  }
-
   getQuestionsAnsweredByUser() {
     const items = [];
 
@@ -159,19 +139,16 @@ class ExamManager {
 
 
   displayBoardWithQuestions() {
-    const questions = this.getQuestions(); // Função fictícia para pegar as questões
-    const totalQuestions = 70; // Total de questões
-    const rows = 70;  // Número de linhas
-    const cols = 5;  // Número de colunas
-    const board = document.getElementById('board');  // Elemento onde o quadro será renderizado
+    const questions = this.getQuestions();
+    const totalQuestions = 70;
+    const rows = 70;
+    const cols = 5;
+    const board = document.getElementById('board');
 
-    // Limpar o quadro antes de renderizar
     board.innerHTML = '';
 
-    // Criar as colunas (A, B, C, D, E)
-    const columns = ['A', 'B', 'C', 'D', 'E'];
     let questionNumberAt = 1
-    // Criar o quadro
+
     for (let i = 0; i < rows; i++) {
 
       const row = document.createElement('div');
@@ -179,25 +156,25 @@ class ExamManager {
 
       for (let j = 0; j < cols; j++) {
 
-        const questionIndex = i * cols + j;  // Calcular o índice da questão
+        const questionIndex = i * cols + j;
         if (questionIndex < totalQuestions) {
           const question = questions[questionIndex];
-          const questionNumber = (questionNumberAt++).toString().padStart(2, '0'); // Exemplo: "A01", "B02", ...
+          const questionNumber = (questionNumberAt++).toString().padStart(2, '0');
 
           const ball = document.createElement('div');
           ball.classList.add('question-ball', 'rounded-full', 'cursor-pointer', 'w-8', 'h-8', 'flex', 'items-center', 'justify-center', 'text-white', 'mr-2');
 
           if (question.answered) {
-            ball.classList.add('bg-green-500'); // Questão respondida
+            ball.classList.add('bg-green-500');
           } else {
-            ball.classList.add('bg-gray-500'); // Questão não respondida
+            ball.classList.add('bg-gray-500');
           }
 
           ball.addEventListener('click', () => {
             this.changeQuestion(question.id)
           });
 
-          ball.textContent = questionNumber; // Exibir o número da questão (exemplo: "A01", "B02")
+          ball.textContent = questionNumber;
           row.appendChild(ball);
         }
       }
@@ -218,6 +195,34 @@ class ExamManager {
     });
 
     return questions;
+  }
+
+  finishExam() {
+    const correctAnswers = this.examData.reduce((acc, { id, gabarito }) => {
+      return acc + (localStorage.getItem(`answer-${id}`) === gabarito ? 1 : 0);
+    }, 0);
+
+    this.displayFinishPage(correctAnswers);
+  }
+
+  exibirDetalhes() {
+    const userQuestions = this.getQuestionsAnsweredByUser
+    const question = this.examData
+    // em displayQuestion criar um if para mostrar a resposta em vermelho e marcar a resposta em verde para correta
+    // em displayBoard colocar vermelho para todas as alternativas que foram erradas
+
+  }
+
+  displayFinishPage(correctAnswers) {
+    const appDiv = document.getElementById("app");
+    appDiv.innerHTML = `
+      <div>
+        <h1 class="text-3xl font-bold mb-4">Simulado Finalizado!</h1>
+        <p class="text-xl mb-6">Você acertou ${correctAnswers} de ${this.examData.length} questões.</p>
+        <button class="bg-green-500 text-white py-2 px-4 rounded-lg hover:bg-green-600" onclick="alert('Exibindo resultados detalhados...')">Ver Resultados Detalhados</button>
+        <button class="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 ml-4" onclick="localStorage.clear(); window.location.href = 'http://localhost/poscomp-lab/index.html'">Finalizar Simulado</button>
+      </div>
+    `;
   }
 }
 
