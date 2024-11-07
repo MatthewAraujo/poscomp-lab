@@ -11,6 +11,7 @@ class ExamManager {
     this.renderBasePage(timerEnabled);
     this.displayQuestion();
     if (timerEnabled) new Timer(this.finishExam.bind(this)).start();
+    this.displayBoardWithQuestions()
   }
 
   async fetchExamData(exam) {
@@ -92,7 +93,13 @@ class ExamManager {
   }
 
   changeQuestion(direction) {
-    this.currentQuestionIndex = Math.min(Math.max(this.currentQuestionIndex + direction, 0), this.examData.length - 1);
+    if (direction > 1 && direction > -1) {
+      this.currentQuestionIndex = direction - 1
+    }
+    else {
+      this.currentQuestionIndex = Math.min(Math.max(this.currentQuestionIndex + direction, 0), this.examData.length - 1);
+    }
+
     this.displayQuestion();
     this.renderNavigationButtons();
   }
@@ -131,6 +138,86 @@ class ExamManager {
       </div>
     `;
   }
+
+  getQuestionsAnsweredByUser() {
+    const items = [];
+
+    for (let i = 0; i < localStorage.length; i++) {
+      const key = localStorage.key(i);
+      const value = localStorage.getItem(key);
+
+      const questionId = key.split("-").at(-1);
+
+      items.push({
+        id: questionId,
+        value: value
+      });
+    }
+    return items;
+  }
+
+
+  displayBoardWithQuestions() {
+    const questions = this.getQuestions(); // Função fictícia para pegar as questões
+    const totalQuestions = 70; // Total de questões
+    const rows = 70;  // Número de linhas
+    const cols = 5;  // Número de colunas
+    const board = document.getElementById('board');  // Elemento onde o quadro será renderizado
+
+    // Limpar o quadro antes de renderizar
+    board.innerHTML = '';
+
+    // Criar as colunas (A, B, C, D, E)
+    const columns = ['A', 'B', 'C', 'D', 'E'];
+    let questionNumberAt = 1
+    // Criar o quadro
+    for (let i = 0; i < rows; i++) {
+
+      const row = document.createElement('div');
+      row.classList.add('flex');
+
+      for (let j = 0; j < cols; j++) {
+
+        const questionIndex = i * cols + j;  // Calcular o índice da questão
+        if (questionIndex < totalQuestions) {
+          const question = questions[questionIndex];
+          const questionNumber = (questionNumberAt++).toString().padStart(2, '0'); // Exemplo: "A01", "B02", ...
+
+          const ball = document.createElement('div');
+          ball.classList.add('question-ball', 'rounded-full', 'cursor-pointer', 'w-8', 'h-8', 'flex', 'items-center', 'justify-center', 'text-white', 'mr-2');
+
+          if (question.answered) {
+            ball.classList.add('bg-green-500'); // Questão respondida
+          } else {
+            ball.classList.add('bg-gray-500'); // Questão não respondida
+          }
+
+          ball.addEventListener('click', () => {
+            this.changeQuestion(question.id)
+          });
+
+          ball.textContent = questionNumber; // Exibir o número da questão (exemplo: "A01", "B02")
+          row.appendChild(ball);
+        }
+      }
+      board.appendChild(row);
+    }
+  }
+
+  getQuestions() {
+    const userQuestions = this.getQuestionsAnsweredByUser();
+    const questions = this.examData.map((question) => {
+      const userQuestion = userQuestions.find((userQ) => userQ.id == question.id);
+
+      return {
+        id: question.id,
+        questionNumber: question.id,
+        answered: userQuestion ? !!userQuestion.value : false
+      };
+    });
+
+    return questions;
+  }
 }
 
 class QuestionRenderer {
@@ -167,14 +254,12 @@ class QuestionRenderer {
 
       return `
       <li class="flex items-center space-x-3">
-        <input type="radio" name="question-${this.question.id}" value="${value}" id="alt-${this.question.id}-${index}" class="form-radio">
+        <input type="radio" name="question-${this.question.id}" value="${key}" id="alt-${this.question.id}-${index}" class="form-radio">
         <label for="alt-${this.question.id}-${index}" class="text-gray-700">${key}: ${value}</label>
       </li>
     `;
     }).join("");
   }
-
-
 
   getSelectedOption() {
     const selected = document.querySelector(`input[name="question-${this.question.id}"]:checked`);
@@ -225,7 +310,6 @@ class ToastNotification {
   }
 }
 
-// Iniciar o exame com tempo ou sem tempo
 function startExam(withTimer = false) {
   const examManager = new ExamManager();
   examManager.initialize(withTimer);
