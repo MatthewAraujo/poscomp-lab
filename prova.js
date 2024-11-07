@@ -110,6 +110,7 @@ class ExamManager {
       this.userResponded = this.userRespondedAllQuestions();
       new ToastNotification(questionId, selectedOption).show();
       this.renderNavigationButtons();
+      this.displayBoardWithQuestions()
     } else {
       console.log("Por favor, selecione uma alternativa antes de enviar.");
     }
