@@ -1,41 +1,1606 @@
 [
   {
     "id": 1,
-    "questão": "Utilize o método de Eliminação de Gauss para resolver o sistema a seguir: -3x + y + z = 1 \n x – 2y + z = 4 \n-x + y − 3z = -7",
-    "alternativas": {
-      "a": "(0, -1, 2)",
-      "b": "(0, 1, 0)",
-      "c": "(2, 0, 2)",
-      "d": "(2, 1, 2)",
-      "e": "(-1, -1, -1)"
-    },
-    "categoria": "1",
-    "gabarito": "a"
+    "content": "Utilize o método de Eliminação de Gauss para resolver o sistema a seguir: -3x + y + z = 1 x – 2y + z = 4 -x + y − 3z = -7",
+    "alternatives": [
+      {
+        "a": "(0, -1, 2)"
+      },
+      {
+        "b": "(0, 1, 0)"
+      },
+      {
+        "c": "(2, 0, 2)"
+      },
+      {
+        "d": "(2, 1, 2)"
+      },
+      {
+        "e": "(-1, -1, -1)"
+      }
+    ],
+    "categoria": "Matemática",
+    "gabarito": "A"
   },
   {
     "id": 2,
-    "questão": "Utilize o método de Eliminação de Gauss para resolver o sistema a seguir: -3x + y + z = 1 \n x – 2y + z = 4 \n-x + y − 3z = -7",
-    "alternativas": {
-      "a": "(0, -1, 2)",
-      "b": "(0, 1, 0)",
-      "c": "(2, 0, 2)",
-      "d": "(2, 1, 2)",
-      "e": "(-1, -1, -1)"
-    },
-    "categoria": "1",
-    "gabarito": "a"
+    "content": "Determine  o  valor  de  x  para que  o  vetor  (1,  x,  5) ∈ R 3 pertença  ao  subespaço <(1, 2, 3), (1, 1, 1)>",
+    "alternatives": [
+      {
+        "a": "x = 0"
+      },
+      {
+        "b": "x = -1"
+      },
+      {
+        "c": "x = 1"
+      },
+      {
+        "d": "x = 3"
+      },
+      {
+        "e": "x = 7"
+      }
+    ],
+    "categoria": "Matemática",
+    "gabarito": "D"
   },
   {
     "id": 3,
-    "questão": "Utilize o método de Eliminação de Gauss para resolver o sistema a seguir: -3x + y + z = 1 \n x – 2y + z = 4 \n-x + y − 3z = -7",
-    "alternativas": {
-      "a": "(0, -1, 2)",
-      "b": "(0, 1, 0)",
-      "c": "(2, 0, 2)",
-      "d": "(2, 1, 2)",
-      "e": "(-1, -1, -1)"
-    },
-    "categoria": "1",
-    "gabarito": "a"
+    "content": "Determine o polinômio característico de J: J= ( 2−21 1−11 1−22 )",
+    "alternatives": [
+      {
+        "a": "0"
+      },
+      {
+        "b": "x"
+      },
+      {
+        "c": "(1 − x)"
+      },
+      {
+        "d": "(1 − x)²"
+      },
+      {
+        "e": "(1 − x)³"
+      }
+    ],
+    "categoria": "Matemática",
+    "gabarito": "E"
+  },
+  {
+    "id": 4,
+    "content": "Nos jogos da Mega-Sena, são sorteados a cada concurso 6 números no intervalo de 1 a 60. Leva o prêmio quem acertar os 6 números sorteados. O apostador, ao fazer um jogo, pode optar por preencher um bilhete com 6, 7, 8 ou 9 números escolhidos. Se o apostador registra um bilhete  com  8  números  escolhidos,  quantos  bilhetes  de  6  números  ele  faria  com  os  mesmos 8 números escolhidos?",
+    "alternatives": [
+      {
+        "a": "56"
+      },
+      {
+        "b": "8!"
+      },
+      {
+        "c": "6!"
+      },
+      {
+        "d": "28"
+      },
+      {
+        "e": "72"
+      }
+    ],
+    "categoria": "Matemática",
+    "gabarito": "D"
+  },
+  {
+    "id": 5,
+    "content": "Recentemente,  com  a  pandemia  de  Covid-19, houve  grande interesse em determinar conjuntos de regiões (de países, estados, municípios, etc.) com alta incidência da doença, com o objetivo de determinar políticas de mitigação da doença nesses locais. Nesse sentido, dado um  mapa  subdividido  em  regiões,  um cluster é  definido  como sendo  um  subconjunto  de  regiões desse mapa (nesse caso, pode ser formado por regiões que não fazem fronteira entre si). Qual o número de possíveis clusters para um mapa com 10 regiões?",
+    "alternatives": [
+      {
+        "a": "1024"
+      },
+      {
+        "b": "10"
+      },
+      {
+        "c": "100"
+      },
+      {
+        "d": "512"
+      },
+      {
+        "e": "20"
+      }
+    ],
+    "categoria": "Matemática",
+    "gabarito": "A"
+  },
+  {
+    "id": 6,
+    "content": "Um anagrama é uma nova palavra formada pela permutação de letras de uma palavra. Essa nova palavra não precisa fazer sentido. Um anagrama de POSCOMP, por exemplo, seria MOCPSOP. Quantos são os anagramas da palavra POSCOMP?",
+    "alternatives": [
+      {
+        "a": "126"
+      },
+      {
+        "b": "252"
+      },
+      {
+        "c": "1260"
+      },
+      {
+        "d": "2520"
+      },
+      {
+        "e": "5040"
+      }
+    ],
+    "categoria": "Matemática",
+    "gabarito": "C"
+  },
+  {
+    "id": 7,
+    "content": "Calcule o lim 푥→10 −3 푙표푔(10∙푥).",
+    "alternatives": [
+      {
+        "a": "0"
+      },
+      {
+        "b": "-3"
+      },
+      {
+        "c": "-2"
+      },
+      {
+        "d": "1"
+      },
+      {
+        "e": "100"
+      }
+    ],
+    "categoria": "Matemática",
+    "gabarito": "C"
+  },
+  {
+    "id": 8,
+    "content": "Determine os intervalos da função 푓 ( 푥 ) =5푥² √ 푥+1.",
+    "alternatives": [
+      {
+        "a": "퐼"
+      },
+      {
+        "b": "퐼"
+      },
+      {
+        "c": "퐼"
+      },
+      {
+        "d": "퐼"
+      },
+      {
+        "e": "퐼"
+      }
+    ],
+    "categoria": "Matemática",
+    "gabarito": "A"
+  },
+  {
+    "id": 9,
+    "content": "Calcule o vetor gradiente da função 푓 ( 푥,푦 ) = 푒 −푥 푠푒푛(푥+푦) no ponto 푃 (0,휋).",
+    "alternatives": [
+      {
+        "a": "∇푓"
+      },
+      {
+        "b": "∇푓"
+      },
+      {
+        "c": "∇푓"
+      },
+      {
+        "d": "∇푓"
+      },
+      {
+        "e": "∇푓"
+      }
+    ],
+    "categoria": "Matemática",
+    "gabarito": "D"
+  },
+  {
+    "id": 10,
+    "content": "Dados  os  vetores u(3,  3,  2),  v(5, -2,  1)  e  w(1, -1,  0),  calcule  a  e  b  tal  que u = av + bw.",
+    "alternatives": [
+      {
+        "a": "a = 2 e b = -7"
+      },
+      {
+        "b": "a = -1 e b = 5"
+      },
+      {
+        "c": "a = 5 e b = -3"
+      },
+      {
+        "d": "a = 3 e b = -9"
+      },
+      {
+        "e": "a = -6 e b = 1"
+      }
+    ],
+    "categoria": "Matemática",
+    "gabarito": "A"
+  },
+  {
+    "id": 11,
+    "content": "Calcule o vetor diretor da interseção dos seguintes planos: x + 2y + z = 3 2x – y +3z = 4",
+    "alternatives": [
+      {
+        "a": "(1, 5, 7)"
+      },
+      {
+        "b": "(1, 1, 0)"
+      },
+      {
+        "c": "(1, 1, 1)"
+      },
+      {
+        "d": "(7, -1, -5)"
+      },
+      {
+        "e": "(5, 1, 5)"
+      }
+    ],
+    "categoria": "Matemática",
+    "gabarito": "D"
+  },
+  {
+    "id": 12,
+    "content": "Determine   a   distância   aproximada   entre   o   ponto   J(3,   1)   e   a   reta s : 6x – 2y + 11 = 0.",
+    "alternatives": [
+      {
+        "a": "1,3"
+      },
+      {
+        "b": "2,6"
+      },
+      {
+        "c": "4,3"
+      },
+      {
+        "d": "12,1"
+      },
+      {
+        "e": "18,5"
+      }
+    ],
+    "categoria": "Matemática",
+    "gabarito": "C"
+  },
+  {
+    "id": 13,
+    "content": "Analise a seguinte proposição: \"Existe pelo menos uma universidade em que todos os cursos têm, pelo menos, 100 alunos\". A negação dessa proposição é logicamente equivalente à proposição:",
+    "alternatives": [
+      {
+        "a": "Em todas as universidades existe pelo menos um curso que possui, no máximo, 99 alunos."
+      },
+      {
+        "b": "Em no máximo uma universidade existe um curso que possui, no máximo, 101 alunos."
+      },
+      {
+        "c": "Há uma universidade em que existe pelo menos um curso com, no máximo, 99 alunos."
+      },
+      {
+        "d": "Em cada universidade existe pelo menos um curso que possui, pelo menos, 100 alunos."
+      },
+      {
+        "e": "Existe nenhuma universidade em que os cursos possuam, no máximo, 100 alunos."
+      }
+    ],
+    "categoria": "Matemática",
+    "gabarito": "A"
+  },
+  {
+    "id": 14,
+    "content": "Sendo p e q proposições simples, considere a proposição composta E(p,q), cujos valores lógicos estão na tabela verdade a seguir: p q E(p,q) F F V F V V V F F V V V Qual é o valor da expressão E?",
+    "alternatives": [
+      {
+        "a": "P–>q"
+      },
+      {
+        "b": "p ou q"
+      },
+      {
+        "c": "q–>p"
+      },
+      {
+        "d": "p ou ~q"
+      },
+      {
+        "e": "(~p)→(p ou q)"
+      }
+    ],
+    "categoria": "Matemática",
+    "gabarito": "A"
+  },
+  {
+    "id": 15,
+    "content": "A expressão lógica p→q é equivalente a:",
+    "alternatives": [
+      {
+        "a": "~p∧~q"
+      },
+      {
+        "b": "~p→q"
+      },
+      {
+        "c": "p→~q"
+      },
+      {
+        "d": "~q->~p"
+      },
+      {
+        "e": "q→p"
+      }
+    ],
+    "categoria": "Matemática",
+    "gabarito": "D"
+  },
+  {
+    "id": 16,
+    "content": "Utilizando  as  leis  de  Morgan, obtenha uma  expressão  em  forma  de  somas  de produtos para a seguinte função: 퐹= ( 푥+푦 )( 푥푦̅+푧 ) ̅̅̅̅̅̅̅̅̅̅̅ ̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅",
+    "alternatives": [
+      {
+        "a": "푥̅+푥̅푧+푦"
+      },
+      {
+        "b": "푥푦̅̅̅+푥̅푦+푦"
+      },
+      {
+        "c": "푥̅푦+푥̅푦+푧"
+      },
+      {
+        "d": "푦̅+푧"
+      },
+      {
+        "e": "푥푦̅̅̅+푥̅푦"
+      }
+    ],
+    "categoria": "Matemática",
+    "gabarito": "D"
+  },
+  {
+    "id": 17,
+    "content": "A partir do seguinte circuito, apresentado na Figura 1, obtenha a equação de saída em soma de produtos (simplifique por álgebra de Boole). Figura 1",
+    "alternatives": [
+      {
+        "a": "푍=퐴퐵"
+      },
+      {
+        "b": "푍= 퐴퐵"
+      },
+      {
+        "c": "푍= 퐴퐵+퐵퐶"
+      },
+      {
+        "d": "푍= 퐴퐵"
+      },
+      {
+        "e": "푍= 퐴퐵"
+      }
+    ],
+    "categoria": "Matemática",
+    "gabarito": "*"
+  },
+  {
+    "id": 18,
+    "content": "Usando  os  conjuntos  de  dados A  =  {1,  4,  2,  6,  8,  10},  B  =  {1,  4,  6,  10}, C = {6, 4, 1, 10}, D = {6, 4, 1}, qual das seguintes alternativas é INCORRETA?",
+    "alternatives": [
+      {
+        "a": "A ⊆ B"
+      },
+      {
+        "b": "D ⊆ A"
+      },
+      {
+        "c": "B = C"
+      },
+      {
+        "d": "B ⊆ A"
+      },
+      {
+        "e": "A ≠ B"
+      }
+    ],
+    "categoria": "Matemática",
+    "gabarito": "A"
+  },
+  {
+    "id": 19,
+    "content": "Com base na Tabela 1, calcule a média da seguinte amostra de número de filhos que têm as famílias que participaram da enquete: Nº filho (Xi) 0 1 2 3 4 Nº famílias (ni) 5 6 8 4 2 Tabela 1",
+    "alternatives": [
+      {
+        "a": "1,12"
+      },
+      {
+        "b": "1,68"
+      },
+      {
+        "c": "2,11"
+      },
+      {
+        "d": "2,87"
+      },
+      {
+        "e": "3,21"
+      }
+    ],
+    "categoria": "Matemática",
+    "gabarito": "B"
+  },
+  {
+    "id": 20,
+    "content": "Em  uma  linha  de  produção,  sabe-se que  a  probabilidade  de  ter  uma  peça  com defeito  é  de  0,05.  Se  o  conjunto  de  unidades  determinadas  constitui  um  conjunto  de  ensaios independentes, qual é a probabilidade de que pelo menos uma peça se encontre com defeito em um total de 10 unidades?",
+    "alternatives": [
+      {
+        "a": "10,0%"
+      },
+      {
+        "b": "40,0%"
+      },
+      {
+        "c": "50,0%"
+      },
+      {
+        "d": "80,0%"
+      },
+      {
+        "e": "100,0%"
+      }
+    ],
+    "categoria": "Matemática",
+    "gabarito": "B"
+  },
+  {
+    "id": 21,
+    "content": "Sobre os conceitos de complexidade de algoritmos, é correto afirmar que:",
+    "alternatives": [
+      {
+        "a": "O espaço requerido por um algoritmo sobre uma dada entrada pode ser medido pelo número de"
+      },
+      {
+        "b": "A complexidade de tempo usa como medida de desempenho a quantidade de memória necessária"
+      },
+      {
+        "c": "A   complexidade média   é   definida   pelo   crescimento   da   complexidade   para   entradas"
+      },
+      {
+        "d": "A  complexidade  assintótica  dá  o  valor  esperado:  a  média  dos  esforços,  levando  em  conta  a"
+      },
+      {
+        "e": "A  complexidade  pessimista  de  um  algoritmo  fornece  seu  desempenho  no  pior  caso:  o  pior"
+      }
+    ],
+    "categoria": "Fundamentos da Computação",
+    "gabarito": "E"
+  },
+  {
+    "id": 22,
+    "content": "Qual  das  seguintes  afirmações  é  verdadeira sobre  a  análise  de  algoritmos recursivos?",
+    "alternatives": [
+      {
+        "a": "A  complexidade  de  tempo  de  um  algoritmo  recursivo  é  sempre  mais  rápida  do  que  a  de  um"
+      },
+      {
+        "b": "A complexidade de espaço de um algoritmo recursivo é sempre menor do que a de um algoritmo"
+      },
+      {
+        "c": "A  análise  de  complexidade  de  um  algoritmo  recursivo  é  sempre  mais  fácil  do  que  a  de  um"
+      },
+      {
+        "d": "Algoritmos recursivos nunca podem sofrer de problemas de estouro de pilha (stack overflow)."
+      },
+      {
+        "e": "A escolha adequada da estrutura de dados pode reduzir o tempo e o espaço necessários para a"
+      }
+    ],
+    "categoria": "Fundamentos da Computação",
+    "gabarito": "E"
+  },
+  {
+    "id": 23,
+    "content": "Considere o seguinte trecho de código: for (i = 1; i <= n; i++) { for (j = 1; j <= m; j++) { // instruções O(1) } } Qual das  seguintes  afirmações  é  verdadeira  sobre  a  complexidade  assintótica  desse  trecho  de código?",
+    "alternatives": [
+      {
+        "a": "A complexidade é O(n) se m for uma constante, e O(m) se n for uma constante."
+      },
+      {
+        "b": "A complexidade é O(n log m) se m for uma constante, e O(m log n) se n for uma constante."
+      },
+      {
+        "c": "A complexidade é O(n + m) se n e m forem do mesmo tamanho."
+      },
+      {
+        "d": "A complexidade é O(1) em todos os casos."
+      },
+      {
+        "e": "A complexidade é O(nm) em todos os casos."
+      }
+    ],
+    "categoria": "Fundamentos da Computação",
+    "gabarito": "E"
+  },
+  {
+    "id": 24,
+    "content": "Sobre funções Hash, é correto afirmar que:",
+    "alternatives": [
+      {
+        "a": "O método de divisão funciona em duas etapas. Na primeira etapa, multiplica-se a chave k por"
+      },
+      {
+        "b": "Em endereçamento aberto, todos os elementos ficam na própria tabela de espelhamento. Isto é,"
+      },
+      {
+        "c": "No método de encadeamento não existe nenhuma lista e nenhum elemento fora da tabela."
+      },
+      {
+        "d": "O hashing pode proporcionar excelente desempenho no pior caso, quando o conjunto de chaves"
+      },
+      {
+        "e": "No método de multiplicação, mapeia-se uma chave k para uma de m posições, tomando o resto"
+      }
+    ],
+    "categoria": "Fundamentos da Computação",
+    "gabarito": "B"
+  },
+  {
+    "id": 25,
+    "content": "Sobre as árvores binárias de busca, é correto afirmar que:",
+    "alternatives": [
+      {
+        "a": "Seja x um nó em uma árvore de busca binária. Se y é um nó na subárvore esquerda de x, então"
+      },
+      {
+        "b": "A propriedade de árvore de busca que permite imprimir todas as chaves em sequência ordenada"
+      },
+      {
+        "c": "Para  excluir  um  nó z de  uma  árvore  de  busca  binária T,  se z tem  apenas  um filho,  então"
+      },
+      {
+        "d": "Para excluir um nó z de uma árvore de busca binária T, se z tem dois filhos, então elevamos o"
+      },
+      {
+        "e": "Para encontrar um nó em uma árvore de busca binária cuja chave é um mínimo, deve-se seguir"
+      }
+    ],
+    "categoria": "Fundamentos da Computação",
+    "gabarito": "E"
+  },
+  {
+    "id": 26,
+    "content": "A ordenação ________________ determina, para cada elemento de entrada x, o número de elementos menores que x e usa essa informação para inserir o elemento x diretamente em sua posição no arranjo de saída. Por exemplo, se 17 elementos forem menores que x, então x pertence à posição de saída 18. Assinale a alternativa que preenche corretamente a lacuna do trecho acima.",
+    "alternatives": [
+      {
+        "a": "mergesort"
+      },
+      {
+        "b": "quicksort"
+      },
+      {
+        "c": "por contagem"
+      },
+      {
+        "d": "por fila de prioridade"
+      },
+      {
+        "e": "por intercalação com sentinela"
+      }
+    ],
+    "categoria": "Fundamentos da Computação",
+    "gabarito": "C"
+  },
+  {
+    "id": 27,
+    "content": "Quais são os  valores  em  decimal  do  binário  (8  bits)  10011001,  considerando  a representação sem sinal e em complemento de 2, respectivamente?",
+    "alternatives": [
+      {
+        "a": "153, -102"
+      },
+      {
+        "b": "100, -101"
+      },
+      {
+        "c": "153, -103"
+      },
+      {
+        "d": "129, 103"
+      },
+      {
+        "e": "1, -1"
+      }
+    ],
+    "categoria": "Fundamentos da Computação",
+    "gabarito": "C"
+  },
+  {
+    "id": 28,
+    "content": "Qual é o resultado da seguinte fórmula Infixo A+B*(C-D*(E-F)-G*H)-I*3 convertida para a notação polonesa?",
+    "alternatives": [
+      {
+        "a": "A+*(B*(C-(D*(E-(F-G*H-I*3)))))"
+      },
+      {
+        "b": "A+B*C-D*E-F-G*H-I*3+*-*-*-*+"
+      },
+      {
+        "c": "+*-*--*A -*ABCDEFGHI3"
+      },
+      {
+        "d": "ABCDEF-*-GH*-*+I3*-"
+      },
+      {
+        "e": "ABCDEFGHI3+*-*-*-*-"
+      }
+    ],
+    "categoria": "Fundamentos da Computação",
+    "gabarito": "D"
+  },
+  {
+    "id": 29,
+    "content": "O computador tem um tempo de acesso à memória principal de 60 ns. Queremos reduzir esse tempo para 20 ns adicionando no cache. Qual a velocidade do cache (tempo de acesso) se pudermos esperar uma probabilidade de 90% de acerto?",
+    "alternatives": [
+      {
+        "a": "04 ns."
+      },
+      {
+        "b": "14 ns."
+      },
+      {
+        "c": "24 ns."
+      },
+      {
+        "d": "54 ns."
+      },
+      {
+        "e": "84 ns."
+      }
+    ],
+    "categoria": "Fundamentos da Computação",
+    "gabarito": "C"
+  },
+  {
+    "id": 30,
+    "content": "Considere um sistema numérico binário com 8 bits e o uso do complemento de 2 para representação de números inteiros para a realização da operação 49 10 −120 10 . Com base nisso, analise as assertivas abaixo, assinalando V, se verdadeiras, ou F, se falsas. (  ) O sistema numérico com essas características pode representar valores entre +255 e -256. (  ) O resultado da operação será representado pelo valor 10111001 2 . (  ) Há um estouro de registro nessa operação quando feita nesse sistema. (  ) A operação de subtração é realizada ao somar a representação de complemento de 2 de 120 10 com a representação binária de 49 10 . A ordem correta de preenchimento dos parênteses, de cima para baixo, é:",
+    "alternatives": [
+      {
+        "a": "V – F – F – V."
+      },
+      {
+        "b": "V – V – F – F."
+      },
+      {
+        "c": "V – F – V – F."
+      },
+      {
+        "d": "F – F – V – V."
+      },
+      {
+        "e": "F – V – F – V."
+      }
+    ],
+    "categoria": "Fundamentos da Computação",
+    "gabarito": "E"
+  },
+  {
+    "id": 31,
+    "content": "Considere um circuito sequencial composto por um flip-flop JK e dois flip-flops. Para fins de simplicidade, o sinal de clock (CLK) está omitido, porém assuma que todos os componentes estão sincronizados nele. O diagrama do circuito é apresentado na Figura 2 abaixo: Figura 2 Dado  o  estado inicial 푄 0 =푄 1 =푄 2 =1,  informe  quantas vezes o  sinal  será  resetado  (ou  seja,  será mudado para zero) depois de 6 ciclos de clock, sendo 퐴=퐵=1:",
+    "alternatives": [
+      {
+        "a": "0"
+      },
+      {
+        "b": "1"
+      },
+      {
+        "c": "2"
+      },
+      {
+        "d": "3"
+      },
+      {
+        "e": "4"
+      }
+    ],
+    "categoria": "Fundamentos da Computação",
+    "gabarito": "C"
+  },
+  {
+    "id": 32,
+    "content": "Considere o circuito combinacional composto por portas lógicas NOT, AND e XOR, além de um multiplexador, conforme a Figura 3, e analise as assertivas abaixo: Figura 3 I. A expressão ( 퐴퐵+퐴퐵 ) ∙퐶 representa a função booleana que define o valor de S. II. A expressão 퐵⊗퐴⊕퐶 representa a função booleana que define o valor de T. III. O  circuito  contém  a  função  de um somador  binário  completo,  com  entrada  de  sinais  de  dois operandos e do transporte, e saída do sinal de soma e do transporte. Quais estão corretas?",
+    "alternatives": [
+      {
+        "a": "Apenas I."
+      },
+      {
+        "b": "Apenas II."
+      },
+      {
+        "c": "Apenas III."
+      },
+      {
+        "d": "Apenas I e III."
+      },
+      {
+        "e": "I, II e III."
+      }
+    ],
+    "categoria": "Fundamentos da Computação",
+    "gabarito": "A"
+  },
+  {
+    "id": 33,
+    "content": "Considere o seguinte código em Linguagem C (Compilador Ansi C): int a = 2, b = 4, c = -1; int *ptx, *pty, *ptz; ptx = &a; pty = &b; ptz = &c; printf (\"%d %d %d %d %d %d \\n\", a, b, c, *ptx, *pty, *ptz); a = (*ptx) * (*pty); b = *ptz + 1; ++c; printf (\"%d %d %d %d %d %d \\n\", a, b, c, *ptx, *pty, *ptz); Assinale a alternativa que corresponde à saída na tela.",
+    "alternatives": [
+      {
+        "a": "2  2 -1 2 4 -1"
+      },
+      {
+        "b": "2 4 -1 2 2 -1"
+      },
+      {
+        "c": "2 2 -1 2 4  0"
+      },
+      {
+        "d": "2 4 -1 2 4 -1"
+      },
+      {
+        "e": "2 4 -1 2 4 -1"
+      }
+    ],
+    "categoria": "Fundamentos da Computação",
+    "gabarito": "E"
+  },
+  {
+    "id": 34,
+    "content": "Considerando o  diagrama  de  classes  UML representado  na  Figura  4, assinale a alternativa correta. Figura 4",
+    "alternatives": [
+      {
+        "a": "A classe “Pessoa” se associa com a classe “Funcionario”, que por sua vez tem uma relação de"
+      },
+      {
+        "b": "A classe “Pessoa” herda da classe “Funcionario”, que tem uma relação de associação com a classe"
+      },
+      {
+        "c": "A associação com navegabilidade da classe “Funcionario” para a classe “Tarefa” gera no código"
+      },
+      {
+        "d": "A classe “Tarefa” faz parte da classe “Funcionario”, constituindo uma relação de agregação."
+      },
+      {
+        "e": "O  método “addTarefa(tarefa:  Tarefa)” pode  ser  invocado  a  partir  de  uma  instância  da  classe"
+      }
+    ],
+    "categoria": "Fundamentos da Computação",
+    "gabarito": "C"
+  },
+  {
+    "id": 35,
+    "content": "Relacione a Coluna 1 à Coluna 2, associando cada Paradigma de Linguagem de Programação à sua respectiva Linguagem de Programação. Coluna 1 1. Programação Procedural. 2. Programação Funcional. 3. Programação de Tipos Abstratos de Dados. 4. Programação Orientada a Objetos. 5. Programação Declarativa. Coluna 2 (  ) CLIPS. (  ) Smalltalk. (  ) CLU. (  ) C. (  ) LISP. A ordem correta de preenchimento dos parênteses, de cima para baixo, é:",
+    "alternatives": [
+      {
+        "a": "1 – 2 – 3 – 4 – 5."
+      },
+      {
+        "b": "2 – 3 – 4 – 5 – 1."
+      },
+      {
+        "c": "3 – 4 – 5 – 1 – 2."
+      },
+      {
+        "d": "4 – 5 – 3 – 2 – 1."
+      },
+      {
+        "e": "5 – 4 – 3 – 1 – 2."
+      }
+    ],
+    "categoria": "Fundamentos da Computação",
+    "gabarito": "E"
+  },
+  {
+    "id": 36,
+    "content": "Qual máquina de aceitação já seria capaz de reconhecer a linguagem a seguir? 퐿= { 푤∈ { 푎,푏 } ∗ | 푤 푐표푛푡é푚 푎 푚푒푠푚푎 푞푢푎푛푡푖푑푎푑푒 푑푒 푎 ′ 푠 푒 푏 ′ 푠}",
+    "alternatives": [
+      {
+        "a": "Autômato Finito."
+      },
+      {
+        "b": "Autômato com Pilha Determinístico."
+      },
+      {
+        "c": "Autômato com Pilha Não Determinístico."
+      },
+      {
+        "d": "Máquina de Turing Decididora."
+      },
+      {
+        "e": "Máquina de Turing Reconhecedora."
+      }
+    ],
+    "categoria": "Fundamentos da Computação",
+    "gabarito": "B"
+  },
+  {
+    "id": 37,
+    "content": "Qual é a Expressão Regular (ER) que denota a linguagem a seguir? 퐿= { 푤∈ { 푎,푏 } ∗ | 푤 푛ã표 푝표푑푒 푡푒푟푚푖푛푎푟 푐표푚 푏푎}",
+    "alternatives": [
+      {
+        "a": "¬"
+      },
+      {
+        "d": "("
+      },
+      {
+        "e": "A linguagem L não é regular e, portanto, não pode ser denotada por uma ER."
+      }
+    ],
+    "categoria": "Fundamentos da Computação",
+    "gabarito": "D"
+  },
+  {
+    "id": 38,
+    "content": "Dada  a  linguagem 퐿= { 푤∈ { 푎,푏 } ∗ | 표 푡푒푟푐푒푖푟표 ú푙푡푖푚표 푠í푚푏표푙표 푑푒 푤 é 푎 } ,  analise  as assertivas abaixo, assinalando V, se verdadeiras, ou F, se falsas. (  ) O menor Autômato Finito Não Determinístico (AFND) que reconhece L tem 4 (quatro) estados. (  ) O Autômato Finito Determinístico (AFD) que reconhece L tem, no mínimo, 8 (oito) estados. (  ) A menor Gramática Regular (GR) que gera L tem 3 (três) não terminais. (  ) O conjunto regular { 푎,푏 } ∗ { 푎 }{ 푎,푏 } {푎,푏} denota L. A ordem correta de preenchimento dos parênteses, de cima para baixo, é:",
+    "alternatives": [
+      {
+        "a": "F – F – V – V."
+      },
+      {
+        "b": "V – V – V – V."
+      },
+      {
+        "c": "F – V – F – V."
+      },
+      {
+        "d": "V – V – F – F."
+      },
+      {
+        "e": "V – F – V – F."
+      }
+    ],
+    "categoria": "Fundamentos da Computação",
+    "gabarito": "B"
+  },
+  {
+    "id": 39,
+    "content": "Nos arquivos ordenados, os registros são dispostos fisicamente no disco de acordo com  os  valores  de  um  de  seus  campos:  o  campo  de  ordenação  (chave). Analise as  seguintes assertivas sobre arquivos ordenados: I. A  leitura  dos  registros  na  ordem  dos  valores  da chave  de  ordenação  é  mais  eficiente  se comparada à leitura desses registros em arquivos heap. II. Permite  atender  de  forma  eficiente  condições  de  pesquisa  sobre  o  campo  de  ordenação  no formato <chave = valor> ou condição de intervalo (isto é, a chave estar no intervalo entre o valor1 e valor2). III. Para acelerar o acesso a um registro baseado no valor de uma chave em arquivos ordenados, a melhor técnica de pesquisa é a técnica de hash. Quais estão corretas?",
+    "alternatives": [
+      {
+        "a": "Apenas I."
+      },
+      {
+        "b": "Apenas II."
+      },
+      {
+        "c": "Apenas III."
+      },
+      {
+        "d": "Apenas I e II."
+      },
+      {
+        "e": "I, II e III."
+      }
+    ],
+    "categoria": "Fundamentos da Computação",
+    "gabarito": "D"
+  },
+  {
+    "id": 40,
+    "content": "Os sistemas operacionais mantêm várias informações sobre cada arquivo, chamadas de  metadados.  Assinale  o  atributo  que NÃO  é um metadado  de  arquivo  gerenciado  pelo  sistema operacional.",
+    "alternatives": [
+      {
+        "a": "Data da criação do arquivo."
+      },
+      {
+        "b": "Tamanho do registro (ex.: número em bytes do registro)."
+      },
+      {
+        "c": "Tamanho atual do arquivo (ex.: número máximo em bytes do arquivo)."
+      },
+      {
+        "d": "Flag (indicador) de tipo de arquivo (ex.: sistema/normal)."
+      },
+      {
+        "e": "Nome  dos  diferentes  campos lógicos  representados  nos  registros  dos  arquivos  (ex.: id, nome,"
+      }
+    ],
+    "categoria": "Fundamentos da Computação",
+    "gabarito": "E"
+  },
+  {
+    "id": 41,
+    "content": "Um desenvolvedor de software armazenou registros representando tweets em um arquivo.  Ele  optou  por  utilizar  uma  árvore trie como  índice  desse  arquivo  para  tornar  eficientes alguns tipos de busca de tweets contendo palavras de determinada natureza. Sobre o uso de árvores trie, analise as assertivas abaixo e assinale V, se verdadeiras, ou F, se falsas. (  ) São  adequadas  para  encontrar de  forma  eficiente palavras  exatas (por  exemplo,  as  palavras “amor” e “beijo”). (  ) São adequadas para encontrar de forma eficiente variações de palavras, tais como diminutivos e aumentativos (por exemplo, palavras que terminam com o sufixo “inho”, como “amorzinho”, “nenezinho”, “beijinho”). (  ) São adequadas para encontrar de forma eficiente variações de palavras com o mesmo prefixo (por exemplo, as variações da palavra “amor”, como “amorzinho” e “amorzão”). A ordem correta de preenchimento dos parênteses, de cima para baixo, é:",
+    "alternatives": [
+      {
+        "a": "F – V – V."
+      },
+      {
+        "b": "F – F – V."
+      },
+      {
+        "c": "V – V – V."
+      },
+      {
+        "d": "V – F – F."
+      },
+      {
+        "e": "V – F – V."
+      }
+    ],
+    "categoria": "Fundamentos da Computação",
+    "gabarito": "E"
+  },
+  {
+    "id": 42,
+    "content": "Em um computador com suporte à memória virtual e paginação, quando ocorre um page fault, o sistema operacional, às vezes, precisa escolher uma página da memória principal (page frame) para dar lugar à página virtual que será carregada do disco como resultado do page fault. Dependendo do tipo de conteúdo presente na página selecionada para substituição, esse conteúdo precisa ser salvo no disco (page out) antes da substituição. Assinale a alternativa que indica uma região de memória típica de um processo, cujo conteúdo não exige salvamento prévio em casos de troca de páginas (page replacement).",
+    "alternatives": [
+      {
+        "a": "Dados alocados dinamicamente (ex.: HEAP)."
+      },
+      {
+        "b": "Dados não inicializados (ex.: BSS)."
+      },
+      {
+        "c": "Dados inicializados (ex.: DATA)."
+      },
+      {
+        "d": "Código (ex.: TEXT)."
+      },
+      {
+        "e": "Pilha (ex.: STACK)."
+      }
+    ],
+    "categoria": "Fundamentos da Computação",
+    "gabarito": "D"
+  },
+  {
+    "id": 43,
+    "content": "O  aumento  dos  requisitos  de  paralelismo  nas aplicações modernas  exige mecanismos  de  bloqueio  (locking)  e  sincronização  cada vez mais  eficientes.  Nesse  contexto, dois mecanismos  muito  usados  são  semáforos  e spin  locks.  Sobre  esses  dois  mecanismos, assinale a alternativa correta.",
+    "alternatives": [
+      {
+        "a": "Spin locks são adequados para cenários de muita contenção entre os processos concorrentes."
+      },
+      {
+        "b": "Semáforos são adequados para cenários de espera de curta duração para entrar na região crítica."
+      },
+      {
+        "c": "Semáforos  e spin  locks são  adequados,  respectivamente,  para  cenários  de  baixa  contenção  e"
+      },
+      {
+        "d": "Spin  locks e  semáforos  são  adequados  para  cenários  de  muita  contenção  e  espera  de  curta"
+      },
+      {
+        "e": "Semáforos  e spin  locks são  adequados,  respectivamente,  para  cenários  de  muita  contenção  e"
+      }
+    ],
+    "categoria": "Fundamentos da Computação",
+    "gabarito": "E"
+  },
+  {
+    "id": 44,
+    "content": "Considere  que  o programa  abaixo,  escrito  em  Linguagem  C,  execute  em  um computador  com  suporte à memória  virtual  e  segmentação  paginada,  tal  como  em  sistemas baseados em Intel x86-64. 1 #include <stdio.h> 2 main(){ 3 int w; 4 printf(“%p”,&w); 5 } Quando a linha 4 é executada, o valor impresso na tela corresponde ao:",
+    "alternatives": [
+      {
+        "a": "Endereço físico representando o segmento, a página e o offset onde se localiza a variável w."
+      },
+      {
+        "b": "Endereço virtual associado ao endereço físico onde se localiza a variável w."
+      },
+      {
+        "c": "Resultado do processamento realizado pela MMU (Memory Management Unit)."
+      },
+      {
+        "d": "Endereço da variável w no espaço de endereçamento físico do processo."
+      },
+      {
+        "e": "Endereço da variável w no working set do processo."
+      }
+    ],
+    "categoria": "Fundamentos da Computação",
+    "gabarito": "B"
+  },
+  {
+    "id": 45,
+    "content": "Qual é o tipo de dado que fornece uma maneira de definir e agrupar coleções de constantes nomeadas?",
+    "alternatives": [
+      {
+        "a": "Ponto flutuante."
+      },
+      {
+        "b": "Decimal."
+      },
+      {
+        "c": "Enumeração."
+      },
+      {
+        "d": "Booleano."
+      },
+      {
+        "e": "Caracter."
+      }
+    ],
+    "categoria": "Fundamentos da Computação",
+    "gabarito": "C"
+  },
+  {
+    "id": 46,
+    "content": "Considere, por exemplo, que um programa precisa ordenar um vetor de objetos de dados numéricos de algum tipo e, para isso, ele usa um subprograma para o processo de ordenação. No   momento   em   que   um   processo   de   ordenação   é   necessário,   uma   sentença   como sortInt(list, listLen) é colocada no programa. Essa chamada é uma abstração:",
+    "alternatives": [
+      {
+        "a": "Do subprograma, no qual os únicos atributos essenciais são o nome do vetor a ser ordenado e o"
+      },
+      {
+        "b": "De  código,  no  qual  a  chamada  é  dependente  do  algoritmo  implementado  no  subprograma"
+      },
+      {
+        "c": "Do algoritmo que implementa o atributo essencial para o usuário, que precisa ver o nome e o"
+      },
+      {
+        "d": "De tipo que inclui apenas a representação de dados de um tipo específico e os subprogramas que"
+      },
+      {
+        "e": "Do processo de ordenação real, cujo algoritmo não é especificado."
+      }
+    ],
+    "categoria": "Fundamentos da Computação",
+    "gabarito": "E"
+  },
+  {
+    "id": 47,
+    "content": "Nas linguagens de programação imperativas, o sinal + é usado para especificar a adição tanto de inteiros quanto de valores de ponto flutuante. Esse uso múltiplo de um operador é chamado de:",
+    "alternatives": [
+      {
+        "a": "Conversão de tipos."
+      },
+      {
+        "b": "Sobrecarga de operadores."
+      },
+      {
+        "c": "Transparência referencial."
+      },
+      {
+        "d": "Efeito colateral."
+      },
+      {
+        "e": "Associatividade."
+      }
+    ],
+    "categoria": "Fundamentos da Computação",
+    "gabarito": "B"
+  },
+  {
+    "id": 48,
+    "content": "Uma  família  de  ligações  sucessivamente  adjacentes,  cada  uma  tendo  uma extremidade  adjacente  à  anterior  e  outra  à  subsequente  (à  exceção  da  primeira  e  da  última)  é um(a):",
+    "alternatives": [
+      {
+        "a": "Circuito."
+      },
+      {
+        "b": "Percurso."
+      },
+      {
+        "c": "Caminho."
+      },
+      {
+        "d": "Ciclo."
+      },
+      {
+        "e": "Corda."
+      }
+    ],
+    "categoria": "Fundamentos da Computação",
+    "gabarito": "B"
+  },
+  {
+    "id": 49,
+    "content": "Sobre os conceitos de grafos, é correto afirmar que:",
+    "alternatives": [
+      {
+        "a": "A todo grafo não orientado G pode ser associado um grafo orientado G’ no qual cada aresta de G"
+      },
+      {
+        "b": "Uma ligação que envolver apenas um vértice é chamada subgrafo."
+      },
+      {
+        "c": "Os elementos de V são chamados vértices e o valor n=|v| é o laço do grafo."
+      },
+      {
+        "d": "Dois vértices que participam de uma ligação são ditos incidentes, termo também usado para duas"
+      },
+      {
+        "e": "Diz-se que um grafo é orientado quando possui uma função de peso ou valor sobre as ligações"
+      }
+    ],
+    "categoria": "Fundamentos da Computação",
+    "gabarito": "A"
+  },
+  {
+    "id": 50,
+    "content": "A  propriedade  em  que  vértices  de  um  subconjunto não  apresentam  relações  de adjacência entre si é denominada de:",
+    "alternatives": [
+      {
+        "a": "Biconexo."
+      },
+      {
+        "b": "Independente."
+      },
+      {
+        "c": "Instável."
+      },
+      {
+        "d": "Complemento."
+      },
+      {
+        "e": "Planar maximal."
+      }
+    ],
+    "categoria": "Fundamentos da Computação",
+    "gabarito": "B"
+  },
+  {
+    "id": 51,
+    "content": "Sobre  bancos  de  dados  distribuídos,  partes  do  banco  de  dados  residem  em diferentes nós (sites) conectados em rede, cada qual dotado de um software gerenciador de dados. Há  o  nó coordenador,  com  competência  para  gerir  a  recuperação  global  de  uma  transação,  e  os demais nós participantes que gerem a transação em cada site e mantêm seus próprios dados locais. Em  uma  transação,  o  coordenador  requisita  cada  participante  que  processará alguma  parte  da transação.  Quando  todos  os  participantes  sinalizarem  ao  coordenador  que  a  parte  da  transação envolvendo cada um foi processada, inicia-se o protocolo de confirmação de duas fases (two-phase commit protocol). Nesse protocolo, há o registro do desdobramento da transação nos arquivos de log, bem como a troca de mensagens entre o coordenador e os participantes. Neste último, considere os três tipos de mensagens usualmente enviadas: I. Mensagem < prepare for commit > II. Mensagem < ready to commit > ou < cannot commit > III. Mensagem < commit > ou < roll back > Os remetentes das mensagens I, II e III, respectivamente, são:",
+    "alternatives": [
+      {
+        "a": "Participantes, participantes e coordenador."
+      },
+      {
+        "b": "Participantes, coordenador e coordenador."
+      },
+      {
+        "c": "Participantes, coordenador e participantes."
+      },
+      {
+        "d": "Coordenador, participantes e coordenador."
+      },
+      {
+        "e": "Coordenador, coordenador e participantes."
+      }
+    ],
+    "categoria": "Tecnologia de Computadores",
+    "gabarito": "D"
+  },
+  {
+    "id": 52,
+    "content": "Quando há impasse no controle de concorrência em sistemas de bancos de dados, uma forma para o tratamento é o emprego de protocolos de prevenção, que são pessimistas quanto à  efetiva  ocorrência  de deadlock.  Considere  as  seguintes  técnicas  usadas  em  protocolos  de prevenção: I. Esperar-ou-morrer (wait-die). II. Ferir-ou-esperar (wound-wait). III. Espera-cautelosa (cautious-waiting). IV. Sem-espera (no-waiting). Algumas dessas técnicas usam o conceito de timestamp (TS) de transações: se TS(T1) < TS(T2), então a transação T1 foi iniciada antes da transação T2. Dentre as técnicas acima, as baseadas em timestamp são:",
+    "alternatives": [
+      {
+        "a": "Apenas I e II."
+      },
+      {
+        "b": "Apenas I e III."
+      },
+      {
+        "c": "Apenas II e III."
+      },
+      {
+        "d": "Apenas II e IV."
+      },
+      {
+        "e": "Apenas III e IV."
+      }
+    ],
+    "categoria": "Tecnologia de Computadores",
+    "gabarito": "A"
+  },
+  {
+    "id": 53,
+    "content": "A normalização  de  esquemas de  bancos  de  dados  relacionais  visa  à  redução  da redundância  de  dados  e  à  melhoria  da  integridade  dos  dados,  pelo  atendimento  a  requisitos denominados de formas normais, tais como: segunda forma normal (2NF), terceira forma normal (3NF) e forma normal de Boyce-Codd (BCNF). Um esquema de relação que atende aos requisitos de uma forma normal pode, potencialmente, atender aos requisitos de outras formas normais. Nesse sentido, se o esquema atende à: I. BCNF, então atende à 2NF. II. 2NF, então atende à 3NF. III. BCNF, então atende à 3NF. IV. 3NF, então atende à BCNF. As alternativas verdadeiras com respeito à relação entre formas normais são:",
+    "alternatives": [
+      {
+        "a": "Apenas I e II."
+      },
+      {
+        "b": "Apenas I e III."
+      },
+      {
+        "c": "Apenas II e III."
+      },
+      {
+        "d": "Apenas II e IV."
+      },
+      {
+        "e": "Apenas III e IV."
+      }
+    ],
+    "categoria": "Tecnologia de Computadores",
+    "gabarito": "B"
+  },
+  {
+    "id": 54,
+    "content": "Seja o alfabeto A = { b, k, z }. Expressões regulares sobre A são definidas (da forma habitual) como cadeias (strings) contendo símbolos do alfabeto dado pela união de A com o conjunto { (, ), *, | }. Assim:  () e e, as quais denotam respectivamente a linguagem vazia e a linguagem que contém apenas a cadeia vazia.  Cada símbolo do alfabeto é uma expressão regular, denotando a linguagem formada pelo símbolo.  Dadas expressões regulares R, R1 e R2, notamos com R*, (R1 | R2) e R1 R2 as expressões regulares, representando,  respectivamente,  as  operações  de  Estrela  de  Kleene  (repetição), Escolha e Concatenação. A notação R? é usada como abreviatura para (R | e ), marcando que R é opcional. Sejam os Tokens de uma certa linguagem definidos pelas expressões regulares sobre A a seguir: Token Expressão Regular T1 k? b? z z* k T2 z? k? b b* z T3 b? z? k k* b Seja um analisador léxico que reconhece os tokens acima, procurando sempre casar a maior parte possível da entrada (maior prefixo possível). Caso a cadeia kkbzkbbkkb seja dada como entrada ao analisador léxico, qual será a sequência de tokens devolvida por ele?",
+    "alternatives": [
+      {
+        "a": "T1 T3 T2 T3."
+      },
+      {
+        "b": "T1 T1 T3."
+      },
+      {
+        "c": "T2 T3."
+      },
+      {
+        "d": "T3 T2 T3."
+      },
+      {
+        "e": "T3 T3 T3."
+      }
+    ],
+    "categoria": "Tecnologia de Computadores",
+    "gabarito": "E"
+  },
+  {
+    "id": 55,
+    "content": "Analise as  seguintes assertivas,  em  relação  à  análise  sintática  no contexto  da construção de compiladores para linguagens de programação e assinale a alternativa correta. I. O funcionamento do algoritmo de análise sintática ascendente (Bottom-up, LR) corresponde ao percurso  da  árvore  sintática  do  programa  a  partir  das  folhas  (representando  os  símbolos terminais da gramática que define a linguagem), até chegar à raiz (que representa a variável ou símbolo não terminal inicial da gramática). II. O funcionamento do algoritmo de análise sintática descendente (Top-down, LL) corresponde ao percurso  da  árvore  sintática  do  programa  a  partir  das  folhas  (representando  as  variáveis  ou símbolos não terminais da gramática que define a linguagem), até chegar à raiz (que representa a sequência de símbolos terminais da gramática). III. Dada uma gramática LL(1) qualquer, se verifica que os lados direitos de qualquer par de regras dela não contêm prefixos não vazios em comum. Por exemplo, uma gramática com regras X -> abBc e Y -> ab não pode ser LL(1), pois o prefixo ab aparece nos lados direitos de ambas as regras. IV. Na  construção  de  tabelas  de  análise  sintática  LR,  podem  aparecer  três  tipos  de  conflitos: Conflitos Empilhar/Empilhar, Conflitos Empilhar/Reduzir e Conflitos Reduzir/Reduzir. V. Na  notação  de  gramáticas  LL(k)  e LR(k),  o  primeiro  símbolo  (L)  indica  que  a  entrada  é lida/processada da esquerda para a direita (Left-to-right). O segundo símbolo (L ou R) indica que a derivação implementada pelo algoritmo na construção/percurso da árvore sintática é mais à esquerda (L) ou mais à direita (R).",
+    "alternatives": [
+      {
+        "a": "Apenas as assertivas I e V estão corretas."
+      },
+      {
+        "b": "Apenas as assertivas II e IV estão corretas."
+      },
+      {
+        "c": "Apenas as assertivas I, II e IV estão corretas."
+      },
+      {
+        "d": "Apenas as assertivas II, III e IV estão corretas."
+      },
+      {
+        "e": "Apenas as assertivas III, IV e V estão corretas."
+      }
+    ],
+    "categoria": "Tecnologia de Computadores",
+    "gabarito": "A"
+  },
+  {
+    "id": 56,
+    "content": "O  algoritmo  de  ray  tracing  é  um  algoritmo  bastante  utilizado  para  gerar renderizações  fotorrealísticas. Sobre  o  ray  tracing,  analise  as  assertivas  abaixo  e  assinale  a alternativa correta. I. Atira raios da câmera virtual na direção do plano do filme para determinar se existem objetos que os intersectam. II. Utiliza a técnica de z-buffer para determinar se os objetos estão visíveis. III. É uma técnica muito eficiente na renderização de superfícies que têm materiais difusos. IV. Simula iluminação indireta através de raios secundários atirados em direções próximas à direção de reflexão do raio primário no objeto atingido.",
+    "alternatives": [
+      {
+        "a": "Apenas I e III estão corretas."
+      },
+      {
+        "b": "Apenas I e IV estão corretas."
+      },
+      {
+        "c": "Apenas II e III estão corretas."
+      },
+      {
+        "d": "Apenas II e IV estão corretas."
+      },
+      {
+        "e": "Apenas I, III e IV estão corretas."
+      }
+    ],
+    "categoria": "Tecnologia de Computadores",
+    "gabarito": "B"
+  },
+  {
+    "id": 57,
+    "content": "Selecione a opção abaixo que NÃO é uma técnica/ferramenta utilizada na remoção de linhas ou superfícies ocultas.",
+    "alternatives": [
+      {
+        "a": "Eliminação de faces traseiras (back-face culling)."
+      },
+      {
+        "b": "Árvores BSP (Binary Space Partitioning)."
+      },
+      {
+        "c": "Hemicubos."
+      },
+      {
+        "d": "Volumes de delimitação (bounding volumes)."
+      },
+      {
+        "e": "Z-buffer."
+      }
+    ],
+    "categoria": "Tecnologia de Computadores",
+    "gabarito": "C"
+  },
+  {
+    "id": 58,
+    "content": "Analise as seguintes assertivas sobre reúso no contexto de engenharia de software: I. Muitos  desenvolvedores  de  software  preferem  reescrever  eles  mesmos  seus  componentes porque acreditam  que  seu trabalho  será  de melhor qualidade,  se  comparado  à  adaptação  de componentes escritos por outros (síndrome do “Não inventado aqui”). II. O reúso pressupõe a existência de bibliotecas com componentes reutilizáveis. Criar, manter e assegurar que desenvolvedores de software usem essa biblioteca pode ser bastante custoso. III. Desenvolver softwares através  do  reúso,  por  tipicamente  adicionar  uma  complexidade  muito grande  ao  código,  exige  desenvolvedores  que  sejam  especialistas  em  reúso,  o  que  torna  o desenvolvimento baseado em reúso muito caro. Dentre as assertivas acima, quais representam fatores que comprometem o reúso de software?",
+    "alternatives": [
+      {
+        "a": "Apenas I."
+      },
+      {
+        "b": "Apenas II."
+      },
+      {
+        "c": "Apenas III."
+      },
+      {
+        "d": "Apenas I e II."
+      },
+      {
+        "e": "I, II e III."
+      }
+    ],
+    "categoria": "Tecnologia de Computadores",
+    "gabarito": "D"
+  },
+  {
+    "id": 59,
+    "content": "Uma  revisão  técnica  formal  (RTF)  é  uma atividade  de  controle  de  qualidade  de software  executada  por  engenheiros  de  software  sobre  um  artefato  de  software  (especificações, código, etc.). As diretrizes para a realização de uma RTF devem ser estabelecidas com antecedência, distribuídas a todos os revisores, e seguidas durante o processo de revisão. Assinale a alternativa que NÃO representa uma boa prática na condução de uma RTF.",
+    "alternatives": [
+      {
+        "a": "Revisar o produto (artefato), e não quem o desenvolveu."
+      },
+      {
+        "b": "Definir uma agenda de revisão inicial (reuniões com datas e horários específicas), mas estender"
+      },
+      {
+        "c": "Identificar áreas problemáticas, sem tentar resolver os problemas apontados."
+      },
+      {
+        "d": "Limitar o número de participantes e exigir preparação prévia de todos."
+      },
+      {
+        "e": "Fornecer treinamento adequado a todos os revisores."
+      }
+    ],
+    "categoria": "Tecnologia de Computadores",
+    "gabarito": "B"
+  },
+  {
+    "id": 60,
+    "content": "Segundo  Sommerville  (2011),  requisitos  não  funcionais  (RNF)  podem  ser classificados como de produto, organizacional ou externo. Considere os seguintes RNF de produto: I. RNF1: “As interfaces projetadas para o sistema on-line devem funcionar nos navegadores Google Chrome e Safari”. II. RNF2: “Os funcionários devem poder usar todas as funções do sistema após quatro horas de treinamento. Espera-se que usuários treinados não façam mais que 2 erros em média por hora de uso”. III. RNF3: “Todos os pedidos feitos por usuários através da interface gráfica devem ter um tempo de resposta máximo de 1 segundo”. Entre os RNF de produto, está a usabilidade. São RNFs classificados como requisitos de usabilidade:",
+    "alternatives": [
+      {
+        "a": "Apenas I."
+      },
+      {
+        "b": "Apenas II."
+      },
+      {
+        "c": "Apenas III."
+      },
+      {
+        "d": "Apenas I e II."
+      },
+      {
+        "e": "I, II e III."
+      }
+    ],
+    "categoria": "Tecnologia de Computadores",
+    "gabarito": "B"
+  },
+  {
+    "id": 61,
+    "content": "A lógica fuzzy é um componente essencial da inteligência artificial, podendo ajudar na  tomada  de  decisão  de  maneira  flexível  e  adaptativa.  Considerando  o  estudo  em inteligência artificial, assinale a alternativa que apresenta corretamente a descrição da lógica fuzzy.",
+    "alternatives": [
+      {
+        "a": "A lógica fuzzy é uma abordagem que lida apenas com informações binárias."
+      },
+      {
+        "b": "A  lógica  fuzzy é  uma  extensão  da  lógica  clássica  que  permite  representar  e  raciocinar  com"
+      },
+      {
+        "c": "A lógica fuzzy é uma técnica utilizada exclusivamente na área da robótica."
+      },
+      {
+        "d": "A lógica fuzzy é uma abordagem que se baseia apenas em valores absolutos."
+      },
+      {
+        "e": "A lógica fuzzy é uma abordagem que se baseia apenas em valores fracionados."
+      }
+    ],
+    "categoria": "Tecnologia de Computadores",
+    "gabarito": "B"
+  },
+  {
+    "id": 62,
+    "content": "As árvores de decisão desempenham um papel fundamental na área da inteligência artificial, sendo amplamente utilizadas em diversos domínios, fornecendo uma forma eficaz de tomar decisões automatizadas com base em padrões e características presentes nos dados. Considerando esses aspectos, assinale a alternativa INCORRETA sobre árvores de decisão.",
+    "alternatives": [
+      {
+        "a": "As árvores de decisão são comumente utilizadas para problemas de classificação, sendo aplicáveis"
+      },
+      {
+        "b": "As árvores de decisão são estruturas de dados lineares que representam o fluxo de execução de"
+      },
+      {
+        "c": "As  árvores  de  decisão  são  capazes  de  lidar  com  dados  categóricos,  assim  como  atributos"
+      },
+      {
+        "d": "As  árvores  de  decisão  são  algoritmos  que  podem  ser  aplicados  em  conjuntos  de  dados  de"
+      },
+      {
+        "e": "As árvores de decisão podem ser usadas em conjunto com outras técnicas de inteligência artificial"
+      }
+    ],
+    "categoria": "Tecnologia de Computadores",
+    "gabarito": "B"
+  },
+  {
+    "id": 63,
+    "content": "Em relação aos métodos de interpolação de intensidade de níveis de cinza ou cor de uma imagem, analise as assertivas abaixo e assinale V, se verdadeiras, ou F, se falsas. (  ) O método do vizinho mais próximo atribui a cada nova posição a intensidade de seu vizinho mais próximo na imagem original. O método pode causar distorções em detalhes finos ou criar formas serrilhadas em bordas retas de imagens. (  ) Na interpolação bilinear, os dois vizinhos mais próximos são utilizados para estimar a intensidade de uma dada posição. O método se baseia na média aritmética de distância desses pixels e causa borramento devido à sua característica de suavização. (  ) A interpolação bicúbica inclui os dezesseis vizinhos mais próximos de um ponto. Esse tipo de interpolação preserva detalhes finos na imagem. A ordem correta de preenchimento dos parênteses, de cima para baixo, é:",
+    "alternatives": [
+      {
+        "a": "F – F – V."
+      },
+      {
+        "b": "F – V – F."
+      },
+      {
+        "c": "V – F – V."
+      },
+      {
+        "d": "V – V – V."
+      },
+      {
+        "e": "V – V – F."
+      }
+    ],
+    "categoria": "Tecnologia de Computadores",
+    "gabarito": "C"
+  },
+  {
+    "id": 64,
+    "content": "As redes neurais são utilizadas na área de reconhecimento de padrões. O modelo mais simples de rede neural possui apenas uma unidade, denominada ______________________. O  modelo  é  utilizado  apenas  em  problemas  de classificação  linearmente  separáveis.  Essa  rede mapeia múltiplas entradas para uma saída representada por um valor binário. Assinale a alternativa que preenche corretamente a lacuna do trecho acima.",
+    "alternatives": [
+      {
+        "a": "Rede neural convolucional"
+      },
+      {
+        "b": "Retropropagação"
+      },
+      {
+        "c": "Perceptron multicamadas"
+      },
+      {
+        "d": "Perceptron"
+      },
+      {
+        "e": "Rede neural recorrente"
+      }
+    ],
+    "categoria": "Tecnologia de Computadores",
+    "gabarito": "D"
+  },
+  {
+    "id": 65,
+    "content": "Uma rede conectada à Internet possui a máscara de sub-rede 255.255.255.128. Qual o número máximo de computadores que a rede suporta?",
+    "alternatives": [
+      {
+        "a": "126"
+      },
+      {
+        "b": "128"
+      },
+      {
+        "c": "254"
+      },
+      {
+        "d": "255.255.255.128"
+      },
+      {
+        "e": "256"
+      }
+    ],
+    "categoria": "Tecnologia de Computadores",
+    "gabarito": "A"
+  },
+  {
+    "id": 66,
+    "content": "Qual dispositivo atua somente nas camadas física e enlace e só envia mensagens às portas para as quais essas mensagens são destinadas?",
+    "alternatives": [
+      {
+        "a": "Hub."
+      },
+      {
+        "b": "Roteador."
+      },
+      {
+        "c": "Repetidor."
+      },
+      {
+        "d": "Gateway."
+      },
+      {
+        "e": "Switch."
+      }
+    ],
+    "categoria": "Tecnologia de Computadores",
+    "gabarito": "E"
+  },
+  {
+    "id": 67,
+    "content": "Considere um pacote de p bytes, enviados por um canal de d metros à taxa de b bits por segundo. Suponha que a velocidade de propagação no meio seja igual a da velocidade da luz no vácuo (c). Qual é a expressão para se determinar a largura/comprimento de um bit?",
+    "alternatives": [
+      {
+        "a": "c/b"
+      },
+      {
+        "b": "b/c"
+      },
+      {
+        "c": "8p/b"
+      },
+      {
+        "d": "d/c"
+      },
+      {
+        "e": "d/c + b/c"
+      }
+    ],
+    "categoria": "Tecnologia de Computadores",
+    "gabarito": "A"
+  },
+  {
+    "id": 68,
+    "content": "Uma transação cliente se torna distribuída se ativa operações em vários servidores diferentes,  isto  é,  um  cliente  faz  requisições  para  mais  de  um  servidor.  A  transação  cliente ______________ conclui cada uma de suas requisições antes de passar para a próxima. Portanto, cada transação acessa objetos dos servidores em sequência. Quando os servidores usam locks, uma transação só pode estar esperando um objeto por vez. Assinale a alternativa que preenche corretamente a lacuna do trecho acima.",
+    "alternatives": [
+      {
+        "a": "plana"
+      },
+      {
+        "b": "aninhada"
+      },
+      {
+        "c": "coordenadora"
+      },
+      {
+        "d": "em duas fases"
+      },
+      {
+        "e": "hierárquica"
+      }
+    ],
+    "categoria": "Tecnologia de Computadores",
+    "gabarito": "A"
+  },
+  {
+    "id": 69,
+    "content": "Em sistemas operacionais distribuídos, é correto afirmar que:",
+    "alternatives": [
+      {
+        "a": "No escalonamento não preemptivo, uma thread pode ser suspensa, em qualquer ponto de sua"
+      },
+      {
+        "b": "Uma invocação assíncrona é aquela que é feita com o auxílio de uma chamada não bloqueante, a"
+      },
+      {
+        "c": "A  gerência  de  memória  trata  da  comunicação  entre  duas threads associadas  a  diferentes"
+      },
+      {
+        "d": "No escalonamento preemptivo, uma thread é executada até realizar uma operação, por exemplo,"
+      },
+      {
+        "e": "Um sistema de invocação síncrono volátil tenta, indefinidamente, realizar a invocação até obter o"
+      }
+    ],
+    "categoria": "Tecnologia de Computadores",
+    "gabarito": "B"
+  },
+  {
+    "id": 70,
+    "content": "Sobre comunicação indireta em sistemas distribuídos, é correto afirmar que:",
+    "alternatives": [
+      {
+        "a": "A comunicação direta é definida como a comunicação entre entidades de um sistema distribuído"
+      },
+      {
+        "b": "No desacoplamento espacial, o remetente e o destinatário (ou destinatários) podem ter tempos"
+      },
+      {
+        "c": "Na comunicação em grupo, implementa comunicação por multicast, na qual uma mensagem é"
+      },
+      {
+        "d": "No  desacoplamento  temporal,  o  remetente  não  sabe  ou  não  precisa  saber  a  identidade  do"
+      },
+      {
+        "e": "A  comunicação  assíncrona  é um  serviço  por  meio  do  qual uma  mensagem é  enviada  para  um"
+      }
+    ],
+    "categoria": "Tecnologia de Computadores",
+    "gabarito": "C"
   }
 ]

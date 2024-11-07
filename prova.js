@@ -101,13 +101,15 @@ function insertQuestion(question) {
 
   const questionText = document.createElement("p");
   questionText.className = "text-lg font-semibold text-gray-800 mb-3";
-  questionText.textContent = `${question.id}. ${question.questão}`;
+  questionText.textContent = `${question.id}. ${question.content}`;
   questionContainer.appendChild(questionText);
 
   const alternativesList = document.createElement("ul");
   alternativesList.className = "space-y-2";
 
-  for (const [key, value] of Object.entries(question.alternativas)) {
+  for (const alternative of question.alternatives) {
+    const [key, value] = Object.entries(alternative)[0];
+
     const alternativeItem = document.createElement("li");
 
     const label = document.createElement("label");
@@ -115,11 +117,11 @@ function insertQuestion(question) {
 
     const input = document.createElement("input");
     input.type = "radio";
-    input.name = `question-${question.id}`;
+    input.name = `question-${question.questionId}`;
     input.value = key;
     input.className = "form-radio text-blue-500";
-    if (questionAlreadyAsked && key == questionAlreadyAsked) {
-      input.defaultChecked = key
+    if (questionAlreadyAsked && key === questionAlreadyAsked) {
+      input.defaultChecked = true;
     }
 
     const text = document.createElement("span");
@@ -130,6 +132,7 @@ function insertQuestion(question) {
     alternativeItem.appendChild(label);
     alternativesList.appendChild(alternativeItem);
   }
+
 
   questionContainer.appendChild(alternativesList);
 
@@ -175,12 +178,13 @@ function submitAnswer(questionId) {
   if (selectedOption) {
     saveAnswer(questionId, selectedOption.value.toLocaleLowerCase())
   } else {
-    alert("Por favor, selecione uma alternativa antes de enviar.");
+    console.log("Por favor, selecione uma alternativa antes de enviar.");
   }
   userResponded = userRespondedAllQuestions()
   toast({ id: questionId, question: selectedOption.value.toLocaleLowerCase() })
   renderFinishButton()
 }
+
 
 
 function startTimer() {
@@ -209,6 +213,7 @@ function startTimer() {
     timerDiv.textContent = `${hours}:${minutes < 10 ? '0' : ''}${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
   }, 1000);
 }
+
 async function startExam(timer) {
   const exam_type = window.location.href.split("#").at(-1)
   examData = await getExam(exam_type)

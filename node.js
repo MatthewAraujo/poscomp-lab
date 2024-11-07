@@ -8,28 +8,88 @@
 //   console.log(gabarito)
 
 // }
+const { create } = require('domain');
 const fs = require('fs');
 const pdfParse = require('pdf-parse');
 
-function extractBlockAndQuestion(pdfPath) {
+async function extractBlockAndProcess(pdfPath, type) {
   const pdfBuffer = fs.readFileSync(pdfPath);
 
-  pdfParse(pdfBuffer).then(data => {
-    const block = extractForCaderno(data.text);
-    const questionLines = getCadernoForPdf(block);
+  try {
+    const data = await pdfParse(pdfBuffer);
+    let block, result;
 
-    console.log(questionLines);
-  }).catch(error => {
+    if (type === 'caderno') {
+      block = extractForCaderno(data.text);
+      result = getCadernoForPdf(block);
+      clearCadernoForPdf(result)
+    } else if (type === 'gabarito') {
+      block = extractForGabarito(data.text);
+      result = getGabaritoForPdf(block);
+    }
+
+    return result;
+  } catch (error) {
     console.error('Erro ao processar o PDF:', error);
+    return null;
+  }
+}
+
+// Exemplo de uso com processamento de caderno e gabarito
+(async () => {
+  const caderno = await extractBlockAndProcess('./caderno_2023.pdf', 'caderno');
+  const gabarito = await extractBlockAndProcess('./gabarito_2023.pdf', 'gabarito');
+  if (caderno && gabarito) {
+    const right_json_exam = caderno.map((question) => {
+      const matchingAnswer = gabarito.find((gabaritoItem) => gabaritoItem.question === question.questionId);
+      if (matchingAnswer) {
+        return {
+          id: question.questionId,
+          content: question.questionContent,
+          alternatives: question.alternatives,
+          categoria: matchingAnswer.category,
+          gabarito: matchingAnswer.answer
+        };
+      }
+    }).filter(item => item !== undefined); // Remove undefined entries caso não haja correspondência
+
+
+    createJsonFile(right_json_exam)
+  } else {
+    console.log('Erro ao processar um dos arquivos PDF.');
+  }
+})();
+
+function clearCadernoForPdf(result) {
+  const regexQuestionContent = /QUESTÃO\s+\d+\s*–\s*(.*?)\s*A\)/; // Captura o conteúdo entre "QUESTÃO [NÚMERO]" e "A)"
+
+  result.map((question) => {
+    const match = question.questionContent.match(regexQuestionContent);
+    if (match) {
+      question.questionContent = match[1].trim();
+    }
   });
 }
 
+
+
+function createJsonFile(data) {
+  try {
+    const jsonData = JSON.stringify(data, null, 2);
+    fs.writeFileSync("assets/provas/poscomp/2022.json", jsonData);
+    console.log("Arquivo JSON criado com sucesso!");
+  } catch (error) {
+    console.error("Erro ao criar o arquivo JSON:", error);
+  }
+}
+
 function extractForCaderno(text) {
-  const pattern = /QUESTÃO 1[\s\S]*?QUESTÃO 70/g;
+  const pattern = /QUESTÃO [\d]+[\s\S]*/g;
   const match = text.match(pattern);
 
   return match ? match[0] : "Bloco não encontrado!";
 }
+
 
 function extractForGabarito(text) {
   const pattern = /\(\*\) Questão\(ões\) anulada\(s\) - a pontuação será revertida a todos os candidatos[\s\S]*?Imprimir/g;
@@ -43,42 +103,49 @@ function getCadernoForPdf(block) {
   const questions = [];
   let currentQuestion = null;
   let questionContent = '';
+  let alternatives = [];
 
-  lines.forEach(line => {
+  lines.forEach((line, index) => {
     line = line.trim();
+    const regex = /(\d{1,2})\/(\d{1,2})\/(\d{4})(\d{1,2}):(\d{2}):(\d{2})/;
 
     if (line === "") return;
+    if (line.includes("Fundatec")) return;
+    if (line.includes("761_POSCOMP_NS_DM")) return;
+    if (line.includes("EXAME")) return;
+    if (regex.test(line)) return;
 
-    const questionMatch = line.match(/^QUESTÃO (\d+) – (.+)/);
-    if (questionMatch) {
+    if (line.includes("QUESTÃO")) {
       if (currentQuestion) {
-        // Atribui o conteúdo da questão e suas alternativas
         currentQuestion.questionContent = questionContent.trim();
+        currentQuestion.alternatives = alternatives;
         questions.push(currentQuestion);
       }
 
+      let questionId = parseInt(line.split(" ").filter(item => item != "")[1])
+
       currentQuestion = {
-        questionNumber: parseInt(questionMatch[1]),
+        questionId: questionId,
         questionContent: '',
         alternatives: []
       };
-      questionContent = questionMatch[2];
+      questionContent = '';
+      alternatives = [];
     }
-    else if (line.match(/^[A-E]\)/)) {
+
+    questionContent += ' ' + line;
+
+    if (line.match(/^[A-E]\)/)) {
       const alternativeMatch = line.match(/^([A-E])\) (.+)/);
-      if (alternativeMatch && currentQuestion) {
-        currentQuestion.alternatives.push({
-          [alternativeMatch[1]]: alternativeMatch[2].trim()
-        });
+      if (alternativeMatch) {
+        alternatives.push({ [alternativeMatch[1].toLowerCase()]: alternativeMatch[2].trim() });
       }
-    }
-    else if (currentQuestion) {
-      questionContent += ' ' + line;
     }
   });
 
   if (currentQuestion) {
     currentQuestion.questionContent = questionContent.trim();
+    currentQuestion.alternatives = alternatives;
     questions.push(currentQuestion);
   }
 
@@ -86,8 +153,12 @@ function getCadernoForPdf(block) {
 }
 
 
+
 function getGabaritoForPdf(block) {
-  const lines = block.split("\n").filter(line => line.trim() !== "" && !line.includes("ttps://fundatec.org.br/portal/concursos/") && !line.includes("Fundatec") && !line.includes("Imprimir"));
+  const lines = block.split("\n").filter(line => line.trim() !== "" &&
+    !line.includes("https://fundatec.org.br/portal/concursos/") &&
+    !line.includes("Fundatec") &&
+    !line.includes("Imprimir"));
 
   const questionLines = [];
   let currentQuestion = { question: 0, answer: '', category: '' };
@@ -110,5 +181,3 @@ function getGabaritoForPdf(block) {
 
   return questionLines;
 }
-
-extractBlockAndQuestion('./caderno_2023.pdf');
