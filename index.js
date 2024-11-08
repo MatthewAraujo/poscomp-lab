@@ -3,13 +3,19 @@ function iniciarExame(prova) {
 }
 
 function checkLocalStorage() {
-  console.log("hgellou")
-  if (localStorage.length > 0) {
-    alert("Deseja retornar a sua antiga prova?")
-    window.localStorage.getItem("examDate");
+  const currentHash = window.location.hash;
+  const savedExamDate = window.localStorage.getItem("examDate");
 
+  console.log(currentHash);
+
+  if (currentHash && currentHash.substring(1) !== savedExamDate && localStorage.length > 0) {
+    const userConfirmed = confirm("Deseja continuar na sua prova antiga?");
+    if (userConfirmed) {
+      window.location.href = `http://localhost/poscomp-lab/prova.html#${savedExamDate}`;
+    }
   }
 }
+
 
 window.onload = () => {
   checkLocalStorage();
