@@ -102,18 +102,30 @@ class ExamManager {
   }
 
   renderFinishButton(navDiv) {
-    const finishButton = document.getElementById("finishButton");
-    if (finishButton) finishButton.remove();
+    const createButton = (text, onClickHandler, buttonId = "finishButton") => {
+      const button = document.createElement("button");
+      button.id = buttonId;
+      button.className = "bg-green-500 text-white py-2 px-4 rounded-lg hover:bg-green-600 transition duration-300";
+      button.textContent = text;
+      button.onclick = onClickHandler;
+      return button;
+    };
 
-    if (this.currentQuestionIndex === this.examData.length - 1 && this.userRespondedAllQuestions()) {
-      const finishButton = document.createElement("button");
-      finishButton.id = "finishButton";
-      finishButton.className = "bg-green-500 text-white py-2 px-4 rounded-lg hover:bg-green-600 transition duration-300";
-      finishButton.textContent = "Finalizar Prova";
-      finishButton.onclick = this.finishExam.bind(this);
+    const existingButton = document.getElementById("finishButton");
+    if (existingButton) existingButton.remove();
+
+    if (this.examFinish) {
+      const finishButton = createButton("Retornar", () => {
+        window.location.href = "http://localhost/poscomp-lab/";
+        window.localStorage.clear()
+      });
+      navDiv.appendChild(finishButton);
+    } else if (this.currentQuestionIndex === this.examData.length - 1 && this.userRespondedAllQuestions()) {
+      const finishButton = createButton("Finalizar Prova", this.finishExam.bind(this));
       navDiv.appendChild(finishButton);
     }
   }
+
 
   displayQuestion() {
     const questionsDiv = document.getElementById("questions");
@@ -320,15 +332,18 @@ class QuestionRenderer extends ExamManager {
       <ul class="space-y-2">${this.renderAlternatives()}</ul>
     `;
 
-    const buttonContainer = document.createElement("div");
-    buttonContainer.className = "flex justify-between mt-4";
-    const submitButton = document.createElement("button");
-    submitButton.className = "bg-green-500 text-white py-2 px-4 rounded-lg hover:bg-green-600";
-    submitButton.textContent = "Salvar Resposta";
-    submitButton.onclick = () => this.submitAnswer(this.question.id, this.getSelectedOption());
-    buttonContainer.appendChild(submitButton);
+    if (!this.examFinish) {
+      const buttonContainer = document.createElement("div");
+      buttonContainer.className = "flex justify-between mt-4";
+      const submitButton = document.createElement("button");
+      submitButton.className = "bg-green-500 text-white py-2 px-4 rounded-lg hover:bg-green-600";
+      submitButton.textContent = "Salvar Resposta";
+      submitButton.onclick = () => this.submitAnswer(this.question.id, this.getSelectedOption());
+      buttonContainer.appendChild(submitButton);
 
-    questionContainer.appendChild(buttonContainer);
+      questionContainer.appendChild(buttonContainer)
+    }
+
     parentDiv.appendChild(questionContainer);
   }
 
