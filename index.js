@@ -6,7 +6,6 @@ function checkLocalStorage() {
   const currentHash = window.location.hash;
   const savedExamDate = window.localStorage.getItem("examDate");
 
-  console.log(currentHash);
 
   if (currentHash && currentHash.substring(1) !== savedExamDate && localStorage.length > 0) {
     const userConfirmed = confirm("Deseja continuar na sua prova antiga?");

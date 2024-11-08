@@ -118,7 +118,13 @@ class ExamManager {
   displayQuestion() {
     const questionsDiv = document.getElementById("questions");
     questionsDiv.innerHTML = "";
-    new QuestionRenderer(this.examData[this.currentQuestionIndex], this.submitAnswer.bind(this)).render(questionsDiv);
+    const questionRenderer = new QuestionRenderer(this.examData[this.currentQuestionIndex], this.submitAnswer.bind(this));
+
+    if (this.examFinish) {
+      questionRenderer.finishExam();
+    }
+
+    questionRenderer.render(questionsDiv);
   }
 
   changeQuestion(direction) {
@@ -222,10 +228,7 @@ class ExamManager {
 
   getQuestions() {
     if (this.examFinish) {
-
       return this.examData
-
-
     } else {
       const userQuestions = this.getQuestionsAnsweredByUser();
       const questions = this.examData.map((question) => {
@@ -247,9 +250,14 @@ class ExamManager {
       return acc + (localStorage.getItem(`answer-${id}`) === gabarito ? 1 : 0);
     }, 0);
 
-    this.displayFinishPage(correctAnswers);
-    this.examFinish = true
+
     this.timer.stopCount()
+    this.setTrueFinishExam()
+    this.displayFinishPage(correctAnswers);
+  }
+
+  setTrueFinishExam() {
+    this.examFinish = true
   }
 
   showQuestionDetails() {
@@ -270,6 +278,7 @@ class ExamManager {
     });
 
     this.examData = questionWithUserResponse
+    this.renderBasePage()
     this.displayQuestion()
     this.displayBoardWithQuestions()
 
@@ -278,14 +287,20 @@ class ExamManager {
   displayFinishPage(correctAnswers) {
     const appDiv = document.getElementById("app");
     appDiv.innerHTML = `
-    <div>
+    <div id="finishPage">
       <h1 class="text-3xl font-bold mb-4">Simulado Finalizado!</h1>
       <p class="text-xl mb-6">Você acertou ${correctAnswers} de ${this.examData.length} questões.</p>
-      <button class="bg-green-500 text-white py-2 px-4 rounded-lg hover:bg-green-600" onclick="showQuestionDetails()">Ver Resultados Detalhados</button>
+      <button id="view-details-btn" class="bg-green-500 text-white py-2 px-4 rounded-lg hover:bg-green-600">Ver Resultados Detalhados</button>
       <button class="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 ml-4" onclick="localStorage.clear(); window.location.href = 'http://localhost/poscomp-lab/index.html'">Finalizar Simulado</button>
     </div>
   `;
+
+    const viewDetailsButton = document.getElementById("view-details-btn");
+    viewDetailsButton.addEventListener("click", () => {
+      this.showQuestionDetails();
+    });
   }
+
 }
 
 
@@ -324,6 +339,7 @@ class QuestionRenderer extends ExamManager {
       const isChecked = this.defaultValue(this.question) === key;
 
       let labelClass = "text-gray-700";
+
       if (this.examFinish) {
         if (key === this.question.gabarito) {
           labelClass = "text-green-600";
@@ -339,6 +355,10 @@ class QuestionRenderer extends ExamManager {
       </li>
     `;
     }).join("");
+  }
+
+  finishExam() {
+    this.examFinish = true;
   }
 
 
