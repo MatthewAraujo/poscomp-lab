@@ -5,15 +5,43 @@ class ExamManager {
     this.userResponded = false;
     this.examDate = window.location.href.split("#").at(-1)
     this.examFinish = false
+    this.timer
   }
 
   async initialize(timerEnabled) {
+    await this.saveExam()
+
     this.examData = await this.fetchExamData(this.examDate);
     this.renderBasePage(timerEnabled);
     this.displayQuestion();
-    if (timerEnabled) new Timer(this.finishExam.bind(this)).start();
+    if (timerEnabled) {
+      this.timer = new Timer(this.finishExam.bind(this));
+      this.timer.start()
+    }
+
     this.displayBoardWithQuestions()
   }
+
+  async saveExam() {
+    const existingExamDate = window.localStorage.getItem("examDate");
+
+    if (existingExamDate) {
+      const toast = new ToastNotification();
+
+      const answer = await toast.showConfirmation();
+      if (!answer) {
+        this.examDate = existingExamDate
+      } else {
+        localStorage.clear()
+      }
+    }
+
+    if (!existingExamDate || existingExamDate !== this.examDate) {
+      window.localStorage.setItem("examDate", this.examDate);
+    }
+  }
+
+
 
   async fetchExamData(exam) {
     try {
@@ -221,6 +249,7 @@ class ExamManager {
 
     this.displayFinishPage(correctAnswers);
     this.examFinish = true
+    this.timer.stopCount()
   }
 
   showQuestionDetails() {
@@ -333,15 +362,21 @@ class Timer {
   constructor(onFinish) {
     this.onFinish = onFinish;
     this.timeLeft = 60 * 60; // 1 hour in seconds
+    this.interval = null;
   }
 
   start() {
+    this.loadTimerFromStorage();
+
     this.interval = setInterval(() => {
       this.timeLeft -= 1;
+      this.saveTimerToStorage();
+
       if (this.timeLeft <= 0) {
         clearInterval(this.interval);
         this.onFinish();
       }
+
       this.updateTimerDisplay();
     }, 1000);
   }
@@ -350,6 +385,24 @@ class Timer {
     const minutes = Math.floor(this.timeLeft / 60);
     const seconds = this.timeLeft % 60;
     document.getElementById("timer").textContent = `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
+  }
+
+  saveTimerToStorage() {
+    localStorage.setItem('timer', this.timeLeft);
+  }
+
+  loadTimerFromStorage() {
+    const savedTime = localStorage.getItem('timer');
+    if (savedTime) {
+      this.timeLeft = parseInt(savedTime, 10);
+    }
+  }
+
+  stopCount() {
+    clearInterval(this.interval);
+    this.saveTimerToStorage();
+    this.timeLeft = 0;
+    this.updateTimerDisplay();
   }
 }
 
@@ -370,6 +423,36 @@ class ToastNotification {
       setTimeout(() => notification.remove(), 1000);
     }, 1500);
   }
+
+  showConfirmation(callback) {
+    return new Promise((resolve) => {
+      const modal = document.createElement("div");
+      modal.className = "fixed inset-0 flex justify-center items-center bg-gray-700 bg-opacity-50";
+
+      const modalContent = document.createElement("div");
+      modalContent.className = "bg-white p-6 rounded-lg shadow-lg flex flex-col items-center";
+      modalContent.innerHTML = `
+      <p>Você já tem um exame salvo. Deseja sobrescrever?</p>
+      <div class="flex space-x-4">
+        <button id="yesBtn" class="bg-green-500 text-white py-2 px-4 rounded-lg hover:bg-green-600" id="yesButton">Sim</button>
+        <button id="noBtn" class="bg-red-500 text-white py-2 px-4 rounded-lg hover:bg-red-600" id="noButton">Não</button>
+      </div>
+    `;
+
+      modal.appendChild(modalContent);
+      document.body.appendChild(modal);
+
+      document.getElementById("yesBtn").addEventListener("click", () => {
+        resolve(true);
+        modal.remove();
+      });
+      document.getElementById("noBtn").addEventListener("click", () => {
+        resolve(false);
+        modal.remove();
+      });
+    });
+  }
+
 }
 
 function startExam(withTimer = false) {
