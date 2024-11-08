@@ -4,6 +4,7 @@ class ExamManager {
     this.currentQuestionIndex = 0;
     this.userResponded = false;
     this.examDate = window.location.href.split("#").at(-1)
+    this.examFinish = false
   }
 
   async initialize(timerEnabled) {
@@ -140,61 +141,77 @@ class ExamManager {
 
   displayBoardWithQuestions() {
     const questions = this.getQuestions();
-    const totalQuestions = 70;
-    const rows = 70;
+    const totalQuestions = this.examData.length;
+    const rows = this.examData.length;
     const cols = 5;
     const board = document.getElementById('board');
 
     board.innerHTML = '';
 
-    let questionNumberAt = 1
+    let questionNumberAt = 1;
 
     for (let i = 0; i < rows; i++) {
-
       const row = document.createElement('div');
       row.classList.add('flex');
 
       for (let j = 0; j < cols; j++) {
-
         const questionIndex = i * cols + j;
-        if (questionIndex < totalQuestions) {
-          const question = questions[questionIndex];
-          const questionNumber = (questionNumberAt++).toString().padStart(2, '0');
+        if (questionIndex >= totalQuestions) continue;
 
-          const ball = document.createElement('div');
-          ball.classList.add('question-ball', 'rounded-full', 'cursor-pointer', 'w-8', 'h-8', 'flex', 'items-center', 'justify-center', 'text-white', 'mr-2');
+        const question = questions[questionIndex];
+        const questionNumber = (questionNumberAt++).toString().padStart(2, '0');
 
-          if (question.answered) {
-            ball.classList.add('bg-green-500');
-          } else {
-            ball.classList.add('bg-gray-500');
-          }
+        const ball = document.createElement('div');
+        ball.className = this.getClassForQuestion(question);
+        ball.textContent = questionNumber;
 
-          ball.addEventListener('click', () => {
-            this.changeQuestion(question.id)
-          });
+        ball.addEventListener('click', () => {
+          this.changeQuestion(question.id);
+        });
 
-          ball.textContent = questionNumber;
-          row.appendChild(ball);
-        }
+        row.appendChild(ball);
       }
       board.appendChild(row);
+
     }
   }
 
+  getClassForQuestion(question) {
+    const baseClasses = 'question-ball rounded-full cursor-pointer w-8 h-8 flex items-center justify-center text-white mr-2';
+
+    if (question.answered) {
+      if (this.examFinish) {
+        return question.answered === question.gabarito
+          ? `${baseClasses} bg-green-500`
+          : `${baseClasses} bg-red-500`;
+      } else {
+        return `${baseClasses} bg-green-500`;
+      }
+    }
+
+    return `${baseClasses} bg-gray-500`;
+  }
+
   getQuestions() {
-    const userQuestions = this.getQuestionsAnsweredByUser();
-    const questions = this.examData.map((question) => {
-      const userQuestion = userQuestions.find((userQ) => userQ.id == question.id);
+    if (this.examFinish) {
 
-      return {
-        id: question.id,
-        questionNumber: question.id,
-        answered: userQuestion ? !!userQuestion.value : false
-      };
-    });
+      return this.examData
 
-    return questions;
+
+    } else {
+      const userQuestions = this.getQuestionsAnsweredByUser();
+      const questions = this.examData.map((question) => {
+        const userQuestion = userQuestions.find((userQ) => userQ.id == question.id);
+
+        return {
+          id: question.id,
+          questionNumber: question.id,
+          answered: userQuestion ? !!userQuestion.value : false
+        };
+      });
+      return questions;
+    }
+
   }
 
   finishExam() {
@@ -203,31 +220,49 @@ class ExamManager {
     }, 0);
 
     this.displayFinishPage(correctAnswers);
+    this.examFinish = true
   }
 
-  exibirDetalhes() {
-    const userQuestions = this.getQuestionsAnsweredByUser
-    const question = this.examData
-    // em displayQuestion criar um if para mostrar a resposta em vermelho e marcar a resposta em verde para correta
-    // em displayBoard colocar vermelho para todas as alternativas que foram erradas
+  showQuestionDetails() {
+    const userQuestions = this.getQuestionsAnsweredByUser();
+    const questions = this.examData;
+
+    const questionWithUserResponse = questions.map((question) => {
+      const questionDTO = userQuestions.find((userQuestion) => parseInt(userQuestion.id) === question.id);
+
+      return {
+        id: question.id,
+        questionNumber: question.id,
+        answered: questionDTO ? questionDTO.value : null,
+        content: question.content,
+        gabarito: question.gabarito ? question.gabarito.toLowerCase() : null,
+        alternatives: question.alternatives
+      };
+    });
+
+    this.examData = questionWithUserResponse
+    this.displayQuestion()
+    this.displayBoardWithQuestions()
 
   }
 
   displayFinishPage(correctAnswers) {
     const appDiv = document.getElementById("app");
     appDiv.innerHTML = `
-      <div>
-        <h1 class="text-3xl font-bold mb-4">Simulado Finalizado!</h1>
-        <p class="text-xl mb-6">Você acertou ${correctAnswers} de ${this.examData.length} questões.</p>
-        <button class="bg-green-500 text-white py-2 px-4 rounded-lg hover:bg-green-600" onclick="alert('Exibindo resultados detalhados...')">Ver Resultados Detalhados</button>
-        <button class="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 ml-4" onclick="localStorage.clear(); window.location.href = 'http://localhost/poscomp-lab/index.html'">Finalizar Simulado</button>
-      </div>
-    `;
+    <div>
+      <h1 class="text-3xl font-bold mb-4">Simulado Finalizado!</h1>
+      <p class="text-xl mb-6">Você acertou ${correctAnswers} de ${this.examData.length} questões.</p>
+      <button class="bg-green-500 text-white py-2 px-4 rounded-lg hover:bg-green-600" onclick="showQuestionDetails()">Ver Resultados Detalhados</button>
+      <button class="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 ml-4" onclick="localStorage.clear(); window.location.href = 'http://localhost/poscomp-lab/index.html'">Finalizar Simulado</button>
+    </div>
+  `;
   }
 }
 
-class QuestionRenderer {
+
+class QuestionRenderer extends ExamManager {
   constructor(question, submitAnswer) {
+    super();
     this.question = question;
     this.submitAnswer = submitAnswer;
   }
@@ -257,14 +292,35 @@ class QuestionRenderer {
     return this.question.alternatives.map((alt, index) => {
       const key = Object.keys(alt)[0];
       const value = alt[key];
+      const isChecked = this.defaultValue(this.question) === key;
+
+      let labelClass = "text-gray-700";
+      if (this.examFinish) {
+        if (key === this.question.gabarito) {
+          labelClass = "text-green-600";
+        } else if (key === this.question.answered) {
+          labelClass = "text-red-600";
+        }
+      }
 
       return `
       <li class="flex items-center space-x-3">
-        <input type="radio" name="question-${this.question.id}" value="${key}" id="alt-${this.question.id}-${index}" class="form-radio">
-        <label for="alt-${this.question.id}-${index}" class="text-gray-700">${key}: ${value}</label>
+        <input type="radio" name="question-${this.question.id}" ${isChecked ? "checked" : ""} value="${key}" id="alt-${this.question.id}-${index}" class="form-radio">
+        <label for="alt-${this.question.id}-${index}" class="${labelClass} font-bold">${key}: ${value}</label>
       </li>
     `;
     }).join("");
+  }
+
+
+  defaultValue(question) {
+    const storedValue = localStorage.getItem(`answer-${question.id}`);
+    const matchingAlternative = question.alternatives.find((alt) => {
+      const key = Object.keys(alt)[0];
+      return key === storedValue;
+    });
+
+    return matchingAlternative ? storedValue : null;
   }
 
   getSelectedOption() {
