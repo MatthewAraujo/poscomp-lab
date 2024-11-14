@@ -47,7 +47,7 @@
   },
   {
     "id": 3,
-    "content": "Determine o polinômio característico de J: \nJ= \n( \n2 −2 1 \n1 −1 1 \n1 −2 2 )",
+    "content": "Determine o polinômio característico de J: \nJ= \n( 2 −2 1) \n(1 −1 1) \n(1 −2 2 )",
     "alternatives": [
       {
         "a": "0"
@@ -369,8 +369,8 @@
   },
   {
     "id": 17,
-    "content": "A partir do seguinte circuito, apresentado na Figura 1, obtenha a equação de saída em soma de produtos (simplifique por álgebra de Boole). Figura 1",
-    "image": "./assets/provas/poscomp/2022/figura.png",
+    "content": "A partir do seguinte circuito, apresentado na Figura 1, obtenha a equação de saída em soma de produtos (simplifique por álgebra de Boole).",
+    "image": "http://localhost/poscomp-lab/assets/provas/poscomp/figura.png",
     "alternatives": [
       {
         "a": "𝑍 = 𝐴𝐵̅ + 𝐴𝐵̅̅ + 𝐵C"
@@ -508,7 +508,7 @@
   },
   {
     "id": 23,
-    "content": "Considere o seguinte trecho de código: \nfor (i = 1; i <= n; i++) {\n for (j = 1; j <= m; j++) { \n// instruções O(1) \n} \n} Qual das  seguintes  afirmações  é  verdadeira  sobre  a  complexidade  assintótica  desse  trecho  de código?",
+    "content": "Considere o seguinte trecho de código: \nfor (i = 1; i <= n; i++) {\n for (j = 1; j <= m; j++) { \n// instruções O(1) \n} \n} \nQual das  seguintes  afirmações  é  verdadeira  sobre  a  complexidade  assintótica  desse  trecho  de código?",
     "alternatives": [
       {
         "a": "A complexidade é O(n) se m for uma constante, e O(m) se n for uma constante."
@@ -693,7 +693,7 @@
   {
     "id": 31,
     "content": "Considere um circuito sequencial composto por um flip-flop JK e dois flip-flops. Para fins de simplicidade, o sinal de clock (CLK) está omitido, porém assuma que todos os componentes estão sincronizados nele. O diagrama do circuito é apresentado na Figura 2 abaixo: Dado o estado inicial 𝑄0 = 𝑄1 = 𝑄2 = 1, informe quantas vezes o sinal será resetado (ou seja, será mudado para zero) depois de 6 ciclos de clock, sendo 𝐴 = 𝐵 = 1:",
-    "image": "./assets/provas/poscomp/2022/figura2.png",
+    "image": "http://localhost/poscomp-lab/assets/provas/poscomp/figura2.png",
     "alternatives": [
       {
         "a": "0"
@@ -717,7 +717,7 @@
   {
     "id": 32,
     "content": "Considere o circuito combinacional composto por portas lógicas NOT, AND e XOR, além de um multiplexador, conforme a Figura 3, e analise as assertivas abaixo: \nI. A expressão (𝐴𝐵 + 𝐴𝐵) ∙ 𝐶 representa a função booleana que define o valor de S.\n II. A expressão 𝐵 ⊗ 𝐴 ⊕ 𝐶 representa a função booleana que define o valor de T. \nIII. O  circuito  contém  a  função  de um somador  binário  completo,  com  entrada  de  sinais  de  dois operandos e do transporte, e saída do sinal de soma e do transporte. Quais estão corretas?",
-    "image": "./assets/provas/poscomp/2022/figura3.png",
+    "image": "http://localhost/poscomp-lab/assets/provas/poscomp/figura3.png",
     "alternatives": [
       {
         "a": "Apenas I."
@@ -764,7 +764,7 @@
   {
     "id": 34,
     "content": "Considerando o  diagrama  de  classes  UML representado  na  Figura  4, assinale a alternativa correta.",
-    "image": "./assets/provas/poscomp/2022/figura4.png",
+    "image": "http://localhost/poscomp-lab/assets/provas/poscomp/figura4.png",
     "alternatives": [
       {
         "a": "A classe “Pessoa” se associa com a classe “Funcionario”, que por sua vez tem uma relação de"
@@ -787,7 +787,7 @@
   },
   {
     "id": 35,
-    "content": "Relacione a Coluna 1 à Coluna 2, associando cada Paradigma de Linguagem de Programação à sua respectiva Linguagem de Programação. Coluna 1 1. Programação Procedural. 2. Programação Funcional. 3. Programação de Tipos Abstratos de Dados. 4. Programação Orientada a Objetos. 5. Programação Declarativa. Coluna 2 (  ) CLIPS. (  ) Smalltalk. (  ) CLU. (  ) C. (  ) LISP. A ordem correta de preenchimento dos parênteses, de cima para baixo, é:",
+    "content": "Relacione a Coluna 1 à Coluna 2, associando cada Paradigma de Linguagem de Programação à sua respectiva Linguagem de Programação. \nColuna 1 \n1. Programação Procedural. \n2. Programação Funcional. \n3. Programação de Tipos Abstratos de Dados. \n4. Programação Orientada a Objetos. \n5. Programação Declarativa. \n\nColuna 2 \n(  ) CLIPS. \n(  ) Smalltalk. \n(  ) CLU. \n(  ) C. \n(  ) LISP. \n\nA ordem correta de preenchimento dos parênteses, de cima para baixo, é:",
     "alternatives": [
       {
         "a": "1 – 2 – 3 – 4 – 5."
@@ -1431,7 +1431,7 @@
   },
   {
     "id": 63,
-    "content": "Em relação aos métodos de interpolação de intensidade de níveis de cinza ou cor de uma imagem, analise as assertivas abaixo e assinale V, se verdadeiras, ou F, se falsas. \n(  ) O método do vizinho mais próximo atribui a cada nova posição a intensidade de seu vizinho mais próximo na imagem original. O método pode causar distorções em detalhes finos ou criar formas serrilhadas em bordas retas de imagens. \n(  ) Na interpolação bilinear, os dois vizinhos mais próximos são utilizados para estimar a intensidade de uma dada posição. O método se baseia na média aritmética de distância desses pixels e causa borramento devido à sua característica de suavização. \n(  ) A interpolação bicúbica inclui os dezesseis vizinhos mais próximos de um ponto. Esse tipo de interpolação preserva detalhes finos na imagem. \nA ordem correta de preenchimento dos parênteses, de cima para baixo, é:",
+    "content": "Em relação aos métodos de interpolação de intensidade de níveis de cinza ou cor de uma imagem, analise as assertivas abaixo e assinale V, se verdadeiras, ou F, se falsas. \n(  ) O método do vizinho mais próximo atribui a cada nova posição a intensidade de seu vizinho mais próximo na imagem original. O método pode causar distorções em detalhes finos ou criar formas serrilhadas em bordas retas de imagens. \n(  ) Na interpolação bilinear, os dois vizinhos mais próximos são utilizados para estimar a intensidade de uma dada posição. O método se baseia na média aritmética de distância desses pixels e causa borramento devido à sua característica de suavização. \n(  ) A interpolação bicúbica inclui os dezesseis vizinhos mais próximos de um ponto. Esse tipo de interpolação preserva detalhes finos na imagem. \n iA ordem correta de preenchimento dos parênteses, de cima para baixo, é:",
     "alternatives": [
       {
         "a": "F – F – V."

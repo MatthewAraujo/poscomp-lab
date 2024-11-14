@@ -150,6 +150,7 @@ class ExamManager {
 
     this.displayQuestion();
     this.renderNavigationButtons();
+    this.displayBoardWithQuestions()
   }
 
   submitAnswer(questionId, selectedOption) {
@@ -213,7 +214,6 @@ class ExamManager {
         ball.textContent = questionNumber;
 
         ball.addEventListener('click', () => {
-
           this.changeQuestion(question.id, true);
         });
 
@@ -236,9 +236,13 @@ class ExamManager {
         return `${baseClasses} bg-green-500`;
       }
     }
+    else if (question.id === this.examData[this.currentQuestionIndex].id) {
+      return `${baseClasses} bg-blue-500`;
+    }
 
     return `${baseClasses} bg-gray-500`;
   }
+
 
   getQuestions() {
     if (this.examFinish) {
@@ -331,14 +335,31 @@ class QuestionRenderer extends ExamManager {
 
     const contentWithLineBreaks = this.question.content.replace(/\n/g, "<br>");
 
+    // Definir o conteúdo HTML da questão
     questionContainer.innerHTML = `
       <p class="text-lg font-semibold text-gray-800 mb-3">${this.question.id}. ${contentWithLineBreaks}</p>
-      <ul class="space-y-2">${this.renderAlternatives()}</ul>
     `;
 
+    // Verificar se há uma imagem e, se houver, adicionar ao contêiner antes das alternativas
+    if (this.question.image) {
+      const imageElement = document.createElement("img");
+      imageElement.src = this.question.image;
+      imageElement.alt = `Image for question ${this.question.id}`;
+      imageElement.className = "w-96 h-auto mt-3 rounded"; // Adicione classes de estilo se necessário
+      questionContainer.appendChild(imageElement);
+    }
+
+    // Adicionar as alternativas após a imagem
+    const alternativesContainer = document.createElement("ul");
+    alternativesContainer.className = "space-y-2";
+    alternativesContainer.innerHTML = this.renderAlternatives();
+    questionContainer.appendChild(alternativesContainer);
+
+    // Verificar se a prova ainda não foi finalizada para renderizar o botão de salvar
     if (!this.examFinish) {
       const buttonContainer = document.createElement("div");
       buttonContainer.className = "flex justify-between mt-4";
+
       const submitButton = document.createElement("button");
       submitButton.className = "bg-green-500 text-white py-2 px-4 rounded-lg hover:bg-green-600";
       submitButton.textContent = "Salvar Resposta";
@@ -348,8 +369,11 @@ class QuestionRenderer extends ExamManager {
       questionContainer.appendChild(buttonContainer);
     }
 
+    // Adicionar o contêiner de perguntas ao contêiner pai
     parentDiv.appendChild(questionContainer);
   }
+
+
 
 
   renderAlternatives() {
