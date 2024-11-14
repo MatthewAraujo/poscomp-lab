@@ -45,7 +45,7 @@ class ExamManager {
 
   async fetchExamData(exam) {
     try {
-      const response = await fetch(`http://localhost/poscomp-lab/assets/provas/poscomp/${exam}.json`, { cache: "no-cache" });
+      const response = await fetch(`https://raw.githubusercontent.com/MatthewAraujo/poscomp-lab/main/assets/provas/poscomp/${exam}.json`, { cache: "no-cache" });
       if (!response.ok) throw new Error(`Erro ao buscar dados: ${response.status}`);
       return await response.json();
     } catch (error) {
