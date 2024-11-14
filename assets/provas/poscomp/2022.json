@@ -139,7 +139,7 @@
   },
   {
     "id": 7,
-    "content": "Calcule o lim 푥→10 −3 푙표푔(10∙푥).",
+    "content": "Calcule o lim x→10 −3 log(10∙x).",
     "alternatives": [
       {
         "a": "0"
@@ -162,7 +162,7 @@
   },
   {
     "id": 8,
-    "content": "Determine os intervalos da função 푓 ( 푥 ) =5푥² √ 푥+1.",
+    "content": "Determine os intervalos da função f ( x ) =5x² √ x+1.",
     "alternatives": [
       {
         "a": "퐼"
@@ -185,7 +185,7 @@
   },
   {
     "id": 9,
-    "content": "Calcule o vetor gradiente da função 푓 ( 푥,푦 ) = 푒 −푥 푠푒푛(푥+푦) no ponto 푃 (0,휋).",
+    "content": "Calcule o vetor gradiente da função f ( x,y ) = 푒 −x 푠푒푛(x+y) no ponto 푃 (0,휋).",
     "alternatives": [
       {
         "a": "∇푓"
@@ -346,7 +346,7 @@
   },
   {
     "id": 16,
-    "content": "Utilizando  as  leis  de  Morgan, obtenha uma  expressão  em  forma  de  somas  de produtos para a seguinte função: 퐹= ( 푥+푦 )( 푥푦̅+푧 ) ̅̅̅̅̅̅̅̅̅̅̅ ̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅",
+    "content": "Utilizando  as  leis  de  Morgan, obtenha uma  expressão  em  forma  de  somas  de produtos para a seguinte função: F= ( x+y )( xy̅+z ) ̅̅̅̅̅̅̅̅̅̅̅ ̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅",
     "alternatives": [
       {
         "a": "푥̅+푥̅푧+푦"
@@ -806,7 +806,7 @@
   },
   {
     "id": 36,
-    "content": "Qual máquina de aceitação já seria capaz de reconhecer a linguagem a seguir? 퐿= { 푤∈ { 푎,푏 } ∗ | 푤 푐표푛푡é푚 푎 푚푒푠푚푎 푞푢푎푛푡푖푑푎푑푒 푑푒 푎 ′ 푠 푒 푏 ′ 푠}",
+    "content": "Qual máquina de aceitação já seria capaz de reconhecer a linguagem a seguir? 퐿= { 푤∈ { 푎,푏 } ∗ | 푤 푐o푛푡é푚 푎 푚푒푠푚푎 푞푢푎푛푡푖푑푎푑푒 푑푒 푎 ′ 푠 푒 푏 ′ 푠}",
     "alternatives": [
       {
         "a": "Autômato Finito."
@@ -829,7 +829,7 @@
   },
   {
     "id": 37,
-    "content": "Qual é a Expressão Regular (ER) que denota a linguagem a seguir? 퐿= { 푤∈ { 푎,푏 } ∗ | 푤 푛ã표 푝표푑푒 푡푒푟푚푖푛푎푟 푐표푚 푏푎}",
+    "content": "Qual é a Expressão Regular (ER) que denota a linguagem a seguir? 퐿= { 푤∈ { 푎,푏 } ∗ | 푤 푛ão 푝o푑푒 푡푒푟푚푖푛푎푟 푐o푚 푏푎}",
     "alternatives": [
       {
         "a": "¬"
@@ -846,7 +846,7 @@
   },
   {
     "id": 38,
-    "content": "Dada  a  linguagem 퐿= { 푤∈ { 푎,푏 } ∗ | 표 푡푒푟푐푒푖푟표 ú푙푡푖푚표 푠í푚푏표푙표 푑푒 푤 é 푎 } ,  analise  as assertivas abaixo, assinalando V, se verdadeiras, ou F, se falsas. (  ) O menor Autômato Finito Não Determinístico (AFND) que reconhece L tem 4 (quatro) estados. (  ) O Autômato Finito Determinístico (AFD) que reconhece L tem, no mínimo, 8 (oito) estados. (  ) A menor Gramática Regular (GR) que gera L tem 3 (três) não terminais. (  ) O conjunto regular { 푎,푏 } ∗ { 푎 }{ 푎,푏 } {푎,푏} denota L. A ordem correta de preenchimento dos parênteses, de cima para baixo, é:",
+    "content": "Dada  a  linguagem 퐿= { 푤∈ { 푎,푏 } ∗ | o 푡푒푟푐푒푖푟o úl푡푖푚o 푠í푚푏olo 푑푒 푤 é 푎 } ,  analise  as assertivas abaixo, assinalando V, se verdadeiras, ou F, se falsas. (  ) O menor Autômato Finito Não Determinístico (AFND) que reconhece L tem 4 (quatro) estados. (  ) O Autômato Finito Determinístico (AFD) que reconhece L tem, no mínimo, 8 (oito) estados. (  ) A menor Gramática Regular (GR) que gera L tem 3 (três) não terminais. (  ) O conjunto regular { 푎,푏 } ∗ { 푎 }{ 푎,푏 } {푎,푏} denota L. A ordem correta de preenchimento dos parênteses, de cima para baixo, é:",
     "alternatives": [
       {
         "a": "F – F – V – V."

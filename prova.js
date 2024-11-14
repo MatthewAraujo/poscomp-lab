@@ -139,8 +139,9 @@ class ExamManager {
     questionRenderer.render(questionsDiv);
   }
 
-  changeQuestion(direction) {
-    if (direction > 1 && direction > -1) {
+  changeQuestion(direction, board) {
+    console.log(direction)
+    if (board) {
       this.currentQuestionIndex = direction - 1
     }
     else {
@@ -212,7 +213,8 @@ class ExamManager {
         ball.textContent = questionNumber;
 
         ball.addEventListener('click', () => {
-          this.changeQuestion(question.id);
+
+          this.changeQuestion(question.id, true);
         });
 
         row.appendChild(ball);
@@ -327,8 +329,10 @@ class QuestionRenderer extends ExamManager {
     const questionContainer = document.createElement("div");
     questionContainer.className = "p-4 bg-gray-50 rounded-lg shadow-md";
 
+    const contentWithLineBreaks = this.question.content.replace(/\n/g, "<br>");
+
     questionContainer.innerHTML = `
-      <p class="text-lg font-semibold text-gray-800 mb-3">${this.question.id}. ${this.question.content}</p>
+      <p class="text-lg font-semibold text-gray-800 mb-3">${this.question.id}. ${contentWithLineBreaks}</p>
       <ul class="space-y-2">${this.renderAlternatives()}</ul>
     `;
 
@@ -341,11 +345,12 @@ class QuestionRenderer extends ExamManager {
       submitButton.onclick = () => this.submitAnswer(this.question.id, this.getSelectedOption());
       buttonContainer.appendChild(submitButton);
 
-      questionContainer.appendChild(buttonContainer)
+      questionContainer.appendChild(buttonContainer);
     }
 
     parentDiv.appendChild(questionContainer);
   }
+
 
   renderAlternatives() {
     return this.question.alternatives.map((alt, index) => {

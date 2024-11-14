@@ -1,16 +1,84 @@
-// let ano = 2002
-
-// for (i = 0; i < 22; i++) {
-//   let carderno = `https://github.com/amimaro/Provas-POSCOMP/blob/master/${ano + i}/gabarito_2023.pdf`
-//   let gabarito = `https://github.com/amimaro/Provas-POSCOMP/blob/master/${ano + i}/caderno_2023.pdf`
-
-//   console.log(carderno)
-//   console.log(gabarito)
-
-// }
-const { create } = require('domain');
-const fs = require('fs');
+const fetch = require('node-fetch');  // Para fazer o download dos arquivos
+const fs = require('fs');  // Para salvar os arquivos localmente
+const path = require('path');  // Para manipulação de diretórios
 const pdfParse = require('pdf-parse');
+
+async function downloadFile(url, filename) {
+  try {
+    const res = await fetch(url);
+    if (!res.ok) {
+      throw new Error(`Falha ao baixar o arquivo: ${res.statusText}`);
+    }
+
+    const buffer = await res.buffer();
+    fs.writeFileSync(filename, buffer);
+    console.log(`Arquivo salvo como: ${filename}`)
+  } catch (error) {
+    console.error(`Erro ao baixar o arquivo: ${error.message}`);
+  }
+}
+
+async function downloadExamFiles(ano) {
+  for (let i = 0; i < 18; i++) {
+    const year = ano + i;
+    const cadernoUrl = `https://raw.githubusercontent.com/amimaro/Provas-POSCOMP/master/${year}/caderno_${year}.pdf`;
+    const gabaritoUrl = `https://raw.githubusercontent.com/amimaro/Provas-POSCOMP/master/${year}/gabarito_${year}.pdf`;
+
+    const cadernoFilename = path.join(__dirname, `${year}_caderno_${year}.pdf`);
+    const gabaritoFilename = path.join(__dirname, `${year}_gabarito_${year}.pdf`);
+
+    await downloadFile(cadernoUrl, cadernoFilename);
+    await downloadFile(gabaritoUrl, gabaritoFilename);
+
+    const caderno = await extractBlockAndProcess(cadernoFilename, 'caderno');
+    const gabarito = await extractBlockAndProcess(gabaritoFilename, 'gabarito');
+
+    if (caderno && gabarito) {
+      const right_json_exam = caderno.map((question) => {
+        const matchingAnswer = gabarito.find((gabaritoItem) => gabaritoItem.question === question.questionId);
+        if (matchingAnswer) {
+          return {
+            id: question.questionId,
+            content: question.questionContent,
+            alternatives: question.alternatives,
+            categoria: matchingAnswer.category,
+            gabarito: matchingAnswer.answer
+          };
+        }
+      }).filter(item => item !== undefined);
+
+      const jsonFilename = path.join(__dirname, "assets", "provas", "poscomp", `${year}.json`);
+      console.log(right_json_exam)
+      createJsonFile(right_json_exam, jsonFilename);
+      console.log(`Arquivo JSON criado: ${jsonFilename}`);
+    } else {
+      console.log(`Erro ao processar os arquivos PDF do ano ${year}.`);
+    }
+  }
+}
+
+const replacements = {
+  "푥": "x",
+  "푙": "l",
+  "표": "o",
+  "푔": "g",
+  "∙": "*",
+  "−": "-",
+  "→": "->",
+  "푓": "f",
+  "푥": "x",
+  "퐹": "F",
+  "푥": "x",
+  "푦": "y",
+  "푧": "z",
+};
+
+
+function normalizeText(input, replacements) {
+  return input.replace(/[\u{1100}-\u{11FF}\u{A960}-\u{A97F}\u{AC00}-\u{D7AF}²√푓푥]/gu,
+    char => replacements[char] || char);
+}
+
 
 async function extractBlockAndProcess(pdfPath, type) {
   const pdfBuffer = fs.readFileSync(pdfPath);
@@ -34,8 +102,17 @@ async function extractBlockAndProcess(pdfPath, type) {
     return null;
   }
 }
+function clearCadernoForPdf(result) {
+  const regexQuestionContent = /QUESTÃO\s+\d+\s*–\s*(.*?)\s*A\)/;
 
-// Exemplo de uso com processamento de caderno e gabarito
+  result.map((question) => {
+    const match = question.questionContent.match(regexQuestionContent);
+    if (match) {
+      question.questionContent = match[1].trim();
+    }
+  });
+}
+
 (async () => {
   const caderno = await extractBlockAndProcess('./caderno_2023.pdf', 'caderno');
   const gabarito = await extractBlockAndProcess('./gabarito_2023.pdf', 'gabarito');
@@ -51,7 +128,7 @@ async function extractBlockAndProcess(pdfPath, type) {
           gabarito: matchingAnswer.answer
         };
       }
-    }).filter(item => item !== undefined); // Remove undefined entries caso não haja correspondência
+    }).filter(item => item !== undefined);
 
 
     createJsonFile(right_json_exam)
@@ -61,7 +138,7 @@ async function extractBlockAndProcess(pdfPath, type) {
 })();
 
 function clearCadernoForPdf(result) {
-  const regexQuestionContent = /QUESTÃO\s+\d+\s*–\s*(.*?)\s*A\)/; // Captura o conteúdo entre "QUESTÃO [NÚMERO]" e "A)"
+  const regexQuestionContent = /QUESTÃO\s+\d+\s*–\s*(.*?)\s*A\)/;
 
   result.map((question) => {
     const match = question.questionContent.match(regexQuestionContent);
@@ -117,7 +194,7 @@ function getCadernoForPdf(block) {
 
     if (line.includes("QUESTÃO")) {
       if (currentQuestion) {
-        currentQuestion.questionContent = questionContent.trim();
+        currentQuestion.questionContent = normalizeText(questionContent.trim(), replacements)
         currentQuestion.alternatives = alternatives;
         questions.push(currentQuestion);
       }
@@ -144,14 +221,13 @@ function getCadernoForPdf(block) {
   });
 
   if (currentQuestion) {
-    currentQuestion.questionContent = questionContent.trim();
+    currentQuestion.questionContent = normalizeText(questionContent.trim(), replacements)
     currentQuestion.alternatives = alternatives;
     questions.push(currentQuestion);
   }
 
   return questions;
 }
-
 
 
 function getGabaritoForPdf(block) {
@@ -181,3 +257,5 @@ function getGabaritoForPdf(block) {
 
   return questionLines;
 }
+const ano = 2022;
+downloadExamFiles(ano);
