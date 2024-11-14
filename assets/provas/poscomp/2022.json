@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "content": "Utilize o método de Eliminação de Gauss para resolver o sistema a seguir: -3x + y + z = 1 x – 2y + z = 4 -x + y − 3z = -7",
+    "content": "Utilize o método de Eliminação de Gauss para resolver o sistema a seguir:,\n -3x + y + z = 1\n  x – 2y + z = 4 \n -x + y - 3z = -7",
     "alternatives": [
       {
         "a": "(0, -1, 2)"
@@ -24,7 +24,7 @@
   },
   {
     "id": 2,
-    "content": "Determine  o  valor  de  x  para que  o  vetor  (1,  x,  5) ∈ R 3 pertença  ao  subespaço <(1, 2, 3), (1, 1, 1)>",
+    "content": "Determine o valor de x para que o vetor (1, x, 5) ∈ R³ pertença ao subespaço <(1, 2, 3), (1, 1, 1)>",
     "alternatives": [
       {
         "a": "x = 0"
@@ -47,7 +47,7 @@
   },
   {
     "id": 3,
-    "content": "Determine o polinômio característico de J: J= ( 2−21 1−11 1−22 )",
+    "content": "Determine o polinômio característico de J: \nJ= \n( \n2 −2 1 \n1 −1 1 \n1 −2 2 )",
     "alternatives": [
       {
         "a": "0"
@@ -139,7 +139,7 @@
   },
   {
     "id": 7,
-    "content": "Calcule o lim x→10 −3 log(10∙x).",
+    "content": "Calcule o lim 𝑥→10−3 𝑙𝑜𝑔(10 ∙ 𝑥)",
     "alternatives": [
       {
         "a": "0"
@@ -162,22 +162,22 @@
   },
   {
     "id": 8,
-    "content": "Determine os intervalos da função f ( x ) =5x² √ x+1.",
+    "content": "Determine os intervalos da função 𝑓(𝑥) = 5𝑥²√𝑥 + 1.",
     "alternatives": [
       {
-        "a": "퐼"
+        "a": "𝐼1 = (−1, −4/5) ; 𝐼2 = (−4/5, 0) ; 𝐼3 = (0, ∞)"
       },
       {
-        "b": "퐼"
+        "b": "𝐼1 = (−∞, −4/5) ; 𝐼2 = (−4/5,0) ; 𝐼3 = (0, ∞)"
       },
       {
-        "c": "퐼"
+        "c": "𝐼1 = (−1, 0); 𝐼2 = (0, 1); 𝐼3 = (1, ∞)"
       },
       {
-        "d": "퐼"
+        "d": ") 𝐼1 = (−1, 1); 𝐼2 = (1,5/4) ; 𝐼3 = (5/4, ∞)"
       },
       {
-        "e": "퐼"
+        "e": " 𝐼1 = (−∞, −1); 𝐼2 = (−1, 1); 𝐼3 = (1, ∞)"
       }
     ],
     "categoria": "Matemática",
@@ -185,22 +185,22 @@
   },
   {
     "id": 9,
-    "content": "Calcule o vetor gradiente da função f ( x,y ) = 푒 −x 푠푒푛(x+y) no ponto 푃 (0,휋).",
+    "content": "– Calcule o vetor gradiente da função 𝑓(𝑥, 𝑦) = 𝑒^-𝑥 𝑠𝑒𝑛(𝑥 + 𝑦) no ponto 𝑃 (0, 𝜋).",
     "alternatives": [
       {
-        "a": "∇푓"
+        "a": "∇𝑓(0, 𝜋) = (0/1)"
       },
       {
-        "b": "∇푓"
+        "b": "∇𝑓(0, 𝜋) = (1/1)"
       },
       {
-        "c": "∇푓"
+        "c": "∇𝑓(0, 𝜋) = (−1/1)"
       },
       {
-        "d": "∇푓"
+        "d": "∇𝑓(0, 𝜋) = (−1/−1)"
       },
       {
-        "e": "∇푓"
+        "e": "∇𝑓(0, 𝜋) = (0/0)"
       }
     ],
     "categoria": "Matemática",
@@ -231,7 +231,7 @@
   },
   {
     "id": 11,
-    "content": "Calcule o vetor diretor da interseção dos seguintes planos: x + 2y + z = 3 2x – y +3z = 4",
+    "content": "Calcule o vetor diretor da interseção dos seguintes planos: \nx + 2y + z = 3 \n2x – y +3z = 4",
     "alternatives": [
       {
         "a": "(1, 5, 7)"
@@ -300,7 +300,7 @@
   },
   {
     "id": 14,
-    "content": "Sendo p e q proposições simples, considere a proposição composta E(p,q), cujos valores lógicos estão na tabela verdade a seguir: p q E(p,q) F F V F V V V F F V V V Qual é o valor da expressão E?",
+    "content": "Sendo p e q proposições simples, considere a proposição composta E(p,q), cujos valores lógicos estão na tabela verdade a seguir:\n p q E(p,q) \nF F V \nF V V \nV F F \nV V V \n\nQual é o valor da expressão E?",
     "alternatives": [
       {
         "a": "P–>q"
@@ -346,22 +346,22 @@
   },
   {
     "id": 16,
-    "content": "Utilizando  as  leis  de  Morgan, obtenha uma  expressão  em  forma  de  somas  de produtos para a seguinte função: F= ( x+y )( xy̅+z ) ̅̅̅̅̅̅̅̅̅̅̅ ̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅",
+    "content": "Utilizando  as  leis  de  Morgan, obtenha uma  expressão  em  forma  de  somas  de produtos para a seguinte função: \nF= ( x+y )( xy̅+z )",
     "alternatives": [
       {
-        "a": "푥̅+푥̅푧+푦"
+        "a": "𝑥̅+ 𝑥̅𝑧 + y"
       },
       {
-        "b": "푥푦̅̅̅+푥̅푦+푦"
+        "b": "𝑥̅𝑦̅ + 𝑥̅𝑦 + y"
       },
       {
-        "c": "푥̅푦+푥̅푦+푧"
+        "c": "𝑥̅𝑦 + 𝑥̅𝑦 + z"
       },
       {
-        "d": "푦̅+푧"
+        "d": "𝑦̅ + z"
       },
       {
-        "e": "푥푦̅̅̅+푥̅푦"
+        "e": "𝑥̅𝑦̅ + 𝑥̅𝑦"
       }
     ],
     "categoria": "Matemática",
@@ -370,21 +370,22 @@
   {
     "id": 17,
     "content": "A partir do seguinte circuito, apresentado na Figura 1, obtenha a equação de saída em soma de produtos (simplifique por álgebra de Boole). Figura 1",
+    "image": "./assets/provas/poscomp/2022/figura.png",
     "alternatives": [
       {
-        "a": "푍=퐴퐵"
+        "a": "𝑍 = 𝐴𝐵̅ + 𝐴𝐵̅̅ + 𝐵C"
       },
       {
-        "b": "푍= 퐴퐵"
+        "b": "𝑍 = 𝐴𝐵̅ + 𝐵C"
       },
       {
-        "c": "푍= 퐴퐵+퐵퐶"
+        "c": "𝑍 = 𝐴𝐵 + 𝐵C"
       },
       {
-        "d": "푍= 퐴퐵"
+        "d": "𝑍 = A𝐵̅+ 𝐴B"
       },
       {
-        "e": "푍= 퐴퐵"
+        "e": "𝑍 = 𝐴𝐵̅ + B"
       }
     ],
     "categoria": "Matemática",
@@ -415,7 +416,7 @@
   },
   {
     "id": 19,
-    "content": "Com base na Tabela 1, calcule a média da seguinte amostra de número de filhos que têm as famílias que participaram da enquete: Nº filho (Xi) 0 1 2 3 4 Nº famílias (ni) 5 6 8 4 2 Tabela 1",
+    "content": "Com base na Tabela 1, calcule a média da seguinte amostra de número de filhos que têm as famílias que participaram da enquete: \n\nNº filho (Xi) 0 1 2 3 4 \nNº famílias (ni) 5 6 8 4 2",
     "alternatives": [
       {
         "a": "1,12"
@@ -507,7 +508,7 @@
   },
   {
     "id": 23,
-    "content": "Considere o seguinte trecho de código: for (i = 1; i <= n; i++) { for (j = 1; j <= m; j++) { // instruções O(1) } } Qual das  seguintes  afirmações  é  verdadeira  sobre  a  complexidade  assintótica  desse  trecho  de código?",
+    "content": "Considere o seguinte trecho de código: \nfor (i = 1; i <= n; i++) {\n for (j = 1; j <= m; j++) { \n// instruções O(1) \n} \n} Qual das  seguintes  afirmações  é  verdadeira  sobre  a  complexidade  assintótica  desse  trecho  de código?",
     "alternatives": [
       {
         "a": "A complexidade é O(n) se m for uma constante, e O(m) se n for uma constante."
@@ -668,7 +669,7 @@
   },
   {
     "id": 30,
-    "content": "Considere um sistema numérico binário com 8 bits e o uso do complemento de 2 para representação de números inteiros para a realização da operação 49 10 −120 10 . Com base nisso, analise as assertivas abaixo, assinalando V, se verdadeiras, ou F, se falsas. (  ) O sistema numérico com essas características pode representar valores entre +255 e -256. (  ) O resultado da operação será representado pelo valor 10111001 2 . (  ) Há um estouro de registro nessa operação quando feita nesse sistema. (  ) A operação de subtração é realizada ao somar a representação de complemento de 2 de 120 10 com a representação binária de 49 10 . A ordem correta de preenchimento dos parênteses, de cima para baixo, é:",
+    "content": "Considere um sistema numérico binário com 8 bits e o uso do complemento de 2 para representação de números inteiros para a realização da operação 49 10 −120 10 . Com base nisso, analise as assertivas abaixo, assinalando V, se verdadeiras, ou F, se falsas. \n(  ) O sistema numérico com essas características pode representar valores entre +255 e -256. \n(  ) O resultado da operação será representado pelo valor 10111001 2 . \n(  ) Há um estouro de registro nessa operação quando feita nesse sistema. \n(  ) A operação de subtração é realizada ao somar a representação de complemento de 2 de 120 10 com a representação binária de 49 10 . \nA ordem correta de preenchimento dos parênteses, de cima para baixo, é:",
     "alternatives": [
       {
         "a": "V – F – F – V."
@@ -691,7 +692,8 @@
   },
   {
     "id": 31,
-    "content": "Considere um circuito sequencial composto por um flip-flop JK e dois flip-flops. Para fins de simplicidade, o sinal de clock (CLK) está omitido, porém assuma que todos os componentes estão sincronizados nele. O diagrama do circuito é apresentado na Figura 2 abaixo: Figura 2 Dado  o  estado inicial 푄 0 =푄 1 =푄 2 =1,  informe  quantas vezes o  sinal  será  resetado  (ou  seja,  será mudado para zero) depois de 6 ciclos de clock, sendo 퐴=퐵=1:",
+    "content": "Considere um circuito sequencial composto por um flip-flop JK e dois flip-flops. Para fins de simplicidade, o sinal de clock (CLK) está omitido, porém assuma que todos os componentes estão sincronizados nele. O diagrama do circuito é apresentado na Figura 2 abaixo: Dado o estado inicial 𝑄0 = 𝑄1 = 𝑄2 = 1, informe quantas vezes o sinal será resetado (ou seja, será mudado para zero) depois de 6 ciclos de clock, sendo 𝐴 = 𝐵 = 1:",
+    "image": "./assets/provas/poscomp/2022/figura2.png",
     "alternatives": [
       {
         "a": "0"
@@ -714,7 +716,8 @@
   },
   {
     "id": 32,
-    "content": "Considere o circuito combinacional composto por portas lógicas NOT, AND e XOR, além de um multiplexador, conforme a Figura 3, e analise as assertivas abaixo: Figura 3 I. A expressão ( 퐴퐵+퐴퐵 ) ∙퐶 representa a função booleana que define o valor de S. II. A expressão 퐵⊗퐴⊕퐶 representa a função booleana que define o valor de T. III. O  circuito  contém  a  função  de um somador  binário  completo,  com  entrada  de  sinais  de  dois operandos e do transporte, e saída do sinal de soma e do transporte. Quais estão corretas?",
+    "content": "Considere o circuito combinacional composto por portas lógicas NOT, AND e XOR, além de um multiplexador, conforme a Figura 3, e analise as assertivas abaixo: \nI. A expressão (𝐴𝐵 + 𝐴𝐵) ∙ 𝐶 representa a função booleana que define o valor de S.\n II. A expressão 𝐵 ⊗ 𝐴 ⊕ 𝐶 representa a função booleana que define o valor de T. \nIII. O  circuito  contém  a  função  de um somador  binário  completo,  com  entrada  de  sinais  de  dois operandos e do transporte, e saída do sinal de soma e do transporte. Quais estão corretas?",
+    "image": "./assets/provas/poscomp/2022/figura3.png",
     "alternatives": [
       {
         "a": "Apenas I."
@@ -737,22 +740,22 @@
   },
   {
     "id": 33,
-    "content": "Considere o seguinte código em Linguagem C (Compilador Ansi C): int a = 2, b = 4, c = -1; int *ptx, *pty, *ptz; ptx = &a; pty = &b; ptz = &c; printf (\"%d %d %d %d %d %d \\n\", a, b, c, *ptx, *pty, *ptz); a = (*ptx) * (*pty); b = *ptz + 1; ++c; printf (\"%d %d %d %d %d %d \\n\", a, b, c, *ptx, *pty, *ptz); Assinale a alternativa que corresponde à saída na tela.",
+    "content": "Considere o seguinte código em Linguagem C (Compilador Ansi C): \nint a = 2, b = 4, c = -1; \nint *ptx, *pty, *ptz; \nptx = &a; \npty = &b; \nptz = &c; \nprintf (\"%d %d %d %d %d %d \/n\", a, b, c, *ptx, *pty, *ptz); \na = (*ptx) * (*pty); \nb = *ptz + 1; \n++c; \nprintf (\"%d %d %d %d %d %d \\n\", a, b, c, *ptx, *pty, *ptz); \nAssinale a alternativa que corresponde à saída na tela.",
     "alternatives": [
       {
-        "a": "2  2 -1 2 4 -1"
+        "a": "2 2 -1 2 4 -1 \n8 -1 0 8 0 0"
       },
       {
-        "b": "2 4 -1 2 2 -1"
+        "b": "2 4 -1 2 2 -1\n2 0 -1 2 0 -1"
       },
       {
-        "c": "2 2 -1 2 4  0"
+        "c": " 2 2 -1 2 4 0\n8 0 -1 8 0 -1"
       },
       {
-        "d": "2 4 -1 2 4 -1"
+        "d": "2 4 -1 2 4 -1\n8 0 -1 8 0 -1"
       },
       {
-        "e": "2 4 -1 2 4 -1"
+        "e": " 2 4 -1 2 4 -1\n8 0 0 8 0 0"
       }
     ],
     "categoria": "Fundamentos da Computação",
@@ -760,7 +763,8 @@
   },
   {
     "id": 34,
-    "content": "Considerando o  diagrama  de  classes  UML representado  na  Figura  4, assinale a alternativa correta. Figura 4",
+    "content": "Considerando o  diagrama  de  classes  UML representado  na  Figura  4, assinale a alternativa correta.",
+    "image": "./assets/provas/poscomp/2022/figura4.png",
     "alternatives": [
       {
         "a": "A classe “Pessoa” se associa com a classe “Funcionario”, que por sua vez tem uma relação de"
@@ -806,7 +810,7 @@
   },
   {
     "id": 36,
-    "content": "Qual máquina de aceitação já seria capaz de reconhecer a linguagem a seguir? 퐿= { 푤∈ { 푎,푏 } ∗ | 푤 푐o푛푡é푚 푎 푚푒푠푚푎 푞푢푎푛푡푖푑푎푑푒 푑푒 푎 ′ 푠 푒 푏 ′ 푠}",
+    "content": "Qual máquina de aceitação já seria capaz de reconhecer a linguagem a seguir? 𝐿 = {𝑤 ∈ {𝑎, 𝑏} ∗ | 𝑤 𝑐𝑜𝑛𝑡é𝑚 𝑎 𝑚𝑒𝑠𝑚𝑎 𝑞𝑢𝑎𝑛𝑡𝑖𝑑𝑎𝑑𝑒 𝑑𝑒 𝑎 ′𝑠 𝑒 𝑏′𝑠  }",
     "alternatives": [
       {
         "a": "Autômato Finito."
@@ -829,13 +833,19 @@
   },
   {
     "id": 37,
-    "content": "Qual é a Expressão Regular (ER) que denota a linguagem a seguir? 퐿= { 푤∈ { 푎,푏 } ∗ | 푤 푛ão 푝o푑푒 푡푒푟푚푖푛푎푟 푐o푚 푏푎}",
+    "content": "Qual é a Expressão Regular (ER) que denota a linguagem a seguir? 𝐿 = {𝑤 ∈ {𝑎, 𝑏} ∗ | 𝑤 𝑛ã𝑜 𝑝𝑜𝑑𝑒 𝑡𝑒𝑟𝑚𝑖𝑛𝑎𝑟 𝑐𝑜𝑚 𝑏𝑎  }",
     "alternatives": [
       {
-        "a": "¬"
+        "a": "¬( (𝑎 ∪ 𝑏)∗𝑏𝑎 )"
       },
       {
-        "d": "("
+        "b": "(𝑎 ∪ 𝑏)∗𝑏a"
+      },
+      {
+        "c": "(𝑎 ∪ 𝑏) ∗ − ( (𝑎 ∪ 𝑏)∗𝑏𝑎 )"
+      },
+      {
+        "d": " ( (𝑎 ∪ 𝑏)∗(𝑏 ∪ 𝑎𝑎) ) ∪ 𝑎 ∪ λ"
       },
       {
         "e": "A linguagem L não é regular e, portanto, não pode ser denotada por uma ER."
@@ -846,7 +856,7 @@
   },
   {
     "id": 38,
-    "content": "Dada  a  linguagem 퐿= { 푤∈ { 푎,푏 } ∗ | o 푡푒푟푐푒푖푟o úl푡푖푚o 푠í푚푏olo 푑푒 푤 é 푎 } ,  analise  as assertivas abaixo, assinalando V, se verdadeiras, ou F, se falsas. (  ) O menor Autômato Finito Não Determinístico (AFND) que reconhece L tem 4 (quatro) estados. (  ) O Autômato Finito Determinístico (AFD) que reconhece L tem, no mínimo, 8 (oito) estados. (  ) A menor Gramática Regular (GR) que gera L tem 3 (três) não terminais. (  ) O conjunto regular { 푎,푏 } ∗ { 푎 }{ 푎,푏 } {푎,푏} denota L. A ordem correta de preenchimento dos parênteses, de cima para baixo, é:",
+    "content": "– Dada a linguagem 𝐿 = {𝑤 ∈ {𝑎, 𝑏}∗| 𝑜 𝑡𝑒𝑟𝑐𝑒𝑖𝑟𝑜 ú𝑙𝑡𝑖𝑚𝑜 𝑠í𝑚𝑏𝑜𝑙𝑜 𝑑𝑒 𝑤 é 𝑎  }, analise as assertivas abaixo, assinalando V, se verdadeiras, ou F, se falsas. \n( ) O menor Autômato Finito Não Determinístico (AFND) que reconhece L tem 4 (quatro) estados. \n( ) O Autômato Finito Determinístico (AFD) que reconhece L tem, no mínimo,  8 (oito) estados.\n( ) A menor Gramática Regular (GR) que gera L tem 3 (três) não terminais.\n( ) O conjunto regular {𝑎, 𝑏 }∗{𝑎}{𝑎, 𝑏}{𝑎, 𝑏 } denota L.\n\nA ordem correta de preenchimento dos parênteses, de cima para baixo, é:",
     "alternatives": [
       {
         "a": "F – F – V – V."
@@ -869,7 +879,7 @@
   },
   {
     "id": 39,
-    "content": "Nos arquivos ordenados, os registros são dispostos fisicamente no disco de acordo com  os  valores  de  um  de  seus  campos:  o  campo  de  ordenação  (chave). Analise as  seguintes assertivas sobre arquivos ordenados: I. A  leitura  dos  registros  na  ordem  dos  valores  da chave  de  ordenação  é  mais  eficiente  se comparada à leitura desses registros em arquivos heap. II. Permite  atender  de  forma  eficiente  condições  de  pesquisa  sobre  o  campo  de  ordenação  no formato <chave = valor> ou condição de intervalo (isto é, a chave estar no intervalo entre o valor1 e valor2). III. Para acelerar o acesso a um registro baseado no valor de uma chave em arquivos ordenados, a melhor técnica de pesquisa é a técnica de hash. Quais estão corretas?",
+    "content": "Nos arquivos ordenados, os registros são dispostos fisicamente no disco de acordo com  os  valores  de  um  de  seus  campos:  o  campo  de  ordenação  (chave). Analise as  seguintes assertivas sobre arquivos ordenados: \nI. A  leitura  dos  registros  na  ordem  dos  valores  da chave  de  ordenação  é  mais  eficiente  se comparada à leitura desses registros em arquivos heap. \nII. Permite  atender  de  forma  eficiente  condições  de  pesquisa  sobre  o  campo  de  ordenação  no formato <chave = valor> ou condição de intervalo (isto é, a chave estar no intervalo entre o valor1 e valor2). \nIII. Para acelerar o acesso a um registro baseado no valor de uma chave em arquivos ordenados, a melhor técnica de pesquisa é a técnica de hash. Quais estão corretas?",
     "alternatives": [
       {
         "a": "Apenas I."
@@ -915,7 +925,7 @@
   },
   {
     "id": 41,
-    "content": "Um desenvolvedor de software armazenou registros representando tweets em um arquivo.  Ele  optou  por  utilizar  uma  árvore trie como  índice  desse  arquivo  para  tornar  eficientes alguns tipos de busca de tweets contendo palavras de determinada natureza. Sobre o uso de árvores trie, analise as assertivas abaixo e assinale V, se verdadeiras, ou F, se falsas. (  ) São  adequadas  para  encontrar de  forma  eficiente palavras  exatas (por  exemplo,  as  palavras “amor” e “beijo”). (  ) São adequadas para encontrar de forma eficiente variações de palavras, tais como diminutivos e aumentativos (por exemplo, palavras que terminam com o sufixo “inho”, como “amorzinho”, “nenezinho”, “beijinho”). (  ) São adequadas para encontrar de forma eficiente variações de palavras com o mesmo prefixo (por exemplo, as variações da palavra “amor”, como “amorzinho” e “amorzão”). A ordem correta de preenchimento dos parênteses, de cima para baixo, é:",
+    "content": "Um desenvolvedor de software armazenou registros representando tweets em um arquivo.  Ele  optou  por  utilizar  uma  árvore trie como  índice  desse  arquivo  para  tornar  eficientes alguns tipos de busca de tweets contendo palavras de determinada natureza. Sobre o uso de árvores trie, analise as assertivas abaixo e assinale V, se verdadeiras, ou F, se falsas. \n(  ) São  adequadas  para  encontrar de  forma  eficiente palavras  exatas (por  exemplo,  as  palavras “amor” e “beijo”). \n(  ) São adequadas para encontrar de forma eficiente variações de palavras, tais como diminutivos e aumentativos (por exemplo, palavras que terminam com o sufixo “inho”, como “amorzinho”, “nenezinho”, “beijinho”). \n(  ) São adequadas para encontrar de forma eficiente variações de palavras com o mesmo prefixo (por exemplo, as variações da palavra “amor”, como “amorzinho” e “amorzão”). \nA ordem correta de preenchimento dos parênteses, de cima para baixo, é:",
     "alternatives": [
       {
         "a": "F – V – V."
@@ -984,7 +994,7 @@
   },
   {
     "id": 44,
-    "content": "Considere  que  o programa  abaixo,  escrito  em  Linguagem  C,  execute  em  um computador  com  suporte à memória  virtual  e  segmentação  paginada,  tal  como  em  sistemas baseados em Intel x86-64. 1 #include <stdio.h> 2 main(){ 3 int w; 4 printf(“%p”,&w); 5 } Quando a linha 4 é executada, o valor impresso na tela corresponde ao:",
+    "content": "Considere  que  o programa  abaixo,  escrito  em  Linguagem  C,  execute  em  um computador  com  suporte à memória  virtual  e  segmentação  paginada,  tal  como  em  sistemas baseados em Intel x86-64. \n1 #include <stdio.h> \n2 main(){ \n3 int w; \n4 printf(“%p”,&w); \n5 } \n\nQuando a linha 4 é executada, o valor impresso na tela corresponde ao:",
     "alternatives": [
       {
         "a": "Endereço físico representando o segmento, a página e o offset onde se localiza a variável w."
@@ -1145,7 +1155,7 @@
   },
   {
     "id": 51,
-    "content": "Sobre  bancos  de  dados  distribuídos,  partes  do  banco  de  dados  residem  em diferentes nós (sites) conectados em rede, cada qual dotado de um software gerenciador de dados. Há  o  nó coordenador,  com  competência  para  gerir  a  recuperação  global  de  uma  transação,  e  os demais nós participantes que gerem a transação em cada site e mantêm seus próprios dados locais. Em  uma  transação,  o  coordenador  requisita  cada  participante  que  processará alguma  parte  da transação.  Quando  todos  os  participantes  sinalizarem  ao  coordenador  que  a  parte  da  transação envolvendo cada um foi processada, inicia-se o protocolo de confirmação de duas fases (two-phase commit protocol). Nesse protocolo, há o registro do desdobramento da transação nos arquivos de log, bem como a troca de mensagens entre o coordenador e os participantes. Neste último, considere os três tipos de mensagens usualmente enviadas: I. Mensagem < prepare for commit > II. Mensagem < ready to commit > ou < cannot commit > III. Mensagem < commit > ou < roll back > Os remetentes das mensagens I, II e III, respectivamente, são:",
+    "content": "Sobre  bancos  de  dados  distribuídos,  partes  do  banco  de  dados  residem  em diferentes nós (sites) conectados em rede, cada qual dotado de um software gerenciador de dados. Há  o  nó coordenador,  com  competência  para  gerir  a  recuperação  global  de  uma  transação,  e  os demais nós participantes que gerem a transação em cada site e mantêm seus próprios dados locais. Em  uma  transação,  o  coordenador  requisita  cada  participante  que  processará alguma  parte  da transação.  Quando  todos  os  participantes  sinalizarem  ao  coordenador  que  a  parte  da  transação envolvendo cada um foi processada, inicia-se o protocolo de confirmação de duas fases (two-phase commit protocol). Nesse protocolo, há o registro do desdobramento da transação nos arquivos de log, bem como a troca de mensagens entre o coordenador e os participantes. Neste último, considere os três tipos de mensagens usualmente enviadas: \nI. Mensagem < prepare for commit > \nII. Mensagem < ready to commit > ou < cannot commit > \nIII. Mensagem < commit > ou < roll back > Os remetentes das mensagens I, II e III, respectivamente, são:",
     "alternatives": [
       {
         "a": "Participantes, participantes e coordenador."
@@ -1168,7 +1178,7 @@
   },
   {
     "id": 52,
-    "content": "Quando há impasse no controle de concorrência em sistemas de bancos de dados, uma forma para o tratamento é o emprego de protocolos de prevenção, que são pessimistas quanto à  efetiva  ocorrência  de deadlock.  Considere  as  seguintes  técnicas  usadas  em  protocolos  de prevenção: I. Esperar-ou-morrer (wait-die). II. Ferir-ou-esperar (wound-wait). III. Espera-cautelosa (cautious-waiting). IV. Sem-espera (no-waiting). Algumas dessas técnicas usam o conceito de timestamp (TS) de transações: se TS(T1) < TS(T2), então a transação T1 foi iniciada antes da transação T2. Dentre as técnicas acima, as baseadas em timestamp são:",
+    "content": "Quando há impasse no controle de concorrência em sistemas de bancos de dados, uma forma para o tratamento é o emprego de protocolos de prevenção, que são pessimistas quanto à  efetiva  ocorrência  de deadlock.  Considere  as  seguintes  técnicas  usadas  em  protocolos  de prevenção: \nI. Esperar-ou-morrer (wait-die). \nII. Ferir-ou-esperar (wound-wait). \nIII. Espera-cautelosa (cautious-waiting). \nIV. Sem-espera (no-waiting). \n\nAlgumas dessas técnicas usam o conceito de timestamp (TS) de transações: se TS(T1) < TS(T2), então a transação T1 foi iniciada antes da transação T2. Dentre as técnicas acima, as baseadas em timestamp são:",
     "alternatives": [
       {
         "a": "Apenas I e II."
@@ -1191,7 +1201,7 @@
   },
   {
     "id": 53,
-    "content": "A normalização  de  esquemas de  bancos  de  dados  relacionais  visa  à  redução  da redundância  de  dados  e  à  melhoria  da  integridade  dos  dados,  pelo  atendimento  a  requisitos denominados de formas normais, tais como: segunda forma normal (2NF), terceira forma normal (3NF) e forma normal de Boyce-Codd (BCNF). Um esquema de relação que atende aos requisitos de uma forma normal pode, potencialmente, atender aos requisitos de outras formas normais. Nesse sentido, se o esquema atende à: I. BCNF, então atende à 2NF. II. 2NF, então atende à 3NF. III. BCNF, então atende à 3NF. IV. 3NF, então atende à BCNF. As alternativas verdadeiras com respeito à relação entre formas normais são:",
+    "content": "A normalização  de  esquemas de  bancos  de  dados  relacionais  visa  à  redução  da redundância  de  dados  e  à  melhoria  da  integridade  dos  dados,  pelo  atendimento  a  requisitos denominados de formas normais, tais como: segunda forma normal (2NF), terceira forma normal (3NF) e forma normal de Boyce-Codd (BCNF). Um esquema de relação que atende aos requisitos de uma forma normal pode, potencialmente, atender aos requisitos de outras formas normais. Nesse sentido, se o esquema atende à: \nI. BCNF, então atende à 2NF. \nII. 2NF, então atende à 3NF. \nIII. BCNF, então atende à 3NF. \nIV. 3NF, então atende à BCNF. \nAs alternativas verdadeiras com respeito à relação entre formas normais são:",
     "alternatives": [
       {
         "a": "Apenas I e II."
@@ -1214,7 +1224,7 @@
   },
   {
     "id": 54,
-    "content": "Seja o alfabeto A = { b, k, z }. Expressões regulares sobre A são definidas (da forma habitual) como cadeias (strings) contendo símbolos do alfabeto dado pela união de A com o conjunto { (, ), *, | }. Assim:  () e e, as quais denotam respectivamente a linguagem vazia e a linguagem que contém apenas a cadeia vazia.  Cada símbolo do alfabeto é uma expressão regular, denotando a linguagem formada pelo símbolo.  Dadas expressões regulares R, R1 e R2, notamos com R*, (R1 | R2) e R1 R2 as expressões regulares, representando,  respectivamente,  as  operações  de  Estrela  de  Kleene  (repetição), Escolha e Concatenação. A notação R? é usada como abreviatura para (R | e ), marcando que R é opcional. Sejam os Tokens de uma certa linguagem definidos pelas expressões regulares sobre A a seguir: Token Expressão Regular T1 k? b? z z* k T2 z? k? b b* z T3 b? z? k k* b Seja um analisador léxico que reconhece os tokens acima, procurando sempre casar a maior parte possível da entrada (maior prefixo possível). Caso a cadeia kkbzkbbkkb seja dada como entrada ao analisador léxico, qual será a sequência de tokens devolvida por ele?",
+    "content": "Seja o alfabeto A = { b, k, z }. Expressões regulares sobre A são definidas (da forma habitual) como cadeias (strings) contendo símbolos do alfabeto dado pela união de A com o conjunto { (, ), *, | }. Assim: \n () e e, as quais denotam respectivamente a linguagem vazia e a linguagem que contém apenas a cadeia vazia. \n Cada símbolo do alfabeto é uma expressão regular, denotando a linguagem formada pelo símbolo. \n Dadas expressões regulares R, R1 e R2, notamos com R*, (R1 | R2) e R1 R2 as expressões regulares, representando,  respectivamente,  as  operações  de  Estrela  de  Kleene  (repetição), Escolha e Concatenação. \nA notação R? é usada como abreviatura para (R | e ), marcando que R é opcional. Sejam os Tokens de uma certa linguagem definidos pelas expressões regulares sobre A a seguir: \nToken Expressão Regular \nT1 k? b? z z* k \nT2 z? k? b b* z \nT3 b? z? k k* b \nSeja um analisador léxico que reconhece os tokens acima, procurando sempre casar a maior parte possível da entrada (maior prefixo possível). Caso a cadeia kkbzkbbkkb seja dada como entrada ao analisador léxico, qual será a sequência de tokens devolvida por ele?",
     "alternatives": [
       {
         "a": "T1 T3 T2 T3."
@@ -1237,7 +1247,7 @@
   },
   {
     "id": 55,
-    "content": "Analise as  seguintes assertivas,  em  relação  à  análise  sintática  no contexto  da construção de compiladores para linguagens de programação e assinale a alternativa correta. I. O funcionamento do algoritmo de análise sintática ascendente (Bottom-up, LR) corresponde ao percurso  da  árvore  sintática  do  programa  a  partir  das  folhas  (representando  os  símbolos terminais da gramática que define a linguagem), até chegar à raiz (que representa a variável ou símbolo não terminal inicial da gramática). II. O funcionamento do algoritmo de análise sintática descendente (Top-down, LL) corresponde ao percurso  da  árvore  sintática  do  programa  a  partir  das  folhas  (representando  as  variáveis  ou símbolos não terminais da gramática que define a linguagem), até chegar à raiz (que representa a sequência de símbolos terminais da gramática). III. Dada uma gramática LL(1) qualquer, se verifica que os lados direitos de qualquer par de regras dela não contêm prefixos não vazios em comum. Por exemplo, uma gramática com regras X -> abBc e Y -> ab não pode ser LL(1), pois o prefixo ab aparece nos lados direitos de ambas as regras. IV. Na  construção  de  tabelas  de  análise  sintática  LR,  podem  aparecer  três  tipos  de  conflitos: Conflitos Empilhar/Empilhar, Conflitos Empilhar/Reduzir e Conflitos Reduzir/Reduzir. V. Na  notação  de  gramáticas  LL(k)  e LR(k),  o  primeiro  símbolo  (L)  indica  que  a  entrada  é lida/processada da esquerda para a direita (Left-to-right). O segundo símbolo (L ou R) indica que a derivação implementada pelo algoritmo na construção/percurso da árvore sintática é mais à esquerda (L) ou mais à direita (R).",
+    "content": "Analise as  seguintes assertivas,  em  relação  à  análise  sintática  no contexto  da construção de compiladores para linguagens de programação e assinale a alternativa correta. \nI. O funcionamento do algoritmo de análise sintática ascendente (Bottom-up, LR) corresponde ao percurso  da  árvore  sintática  do  programa  a  partir  das  folhas  (representando  os  símbolos terminais da gramática que define a linguagem), até chegar à raiz (que representa a variável ou símbolo não terminal inicial da gramática). \nII. O funcionamento do algoritmo de análise sintática descendente (Top-down, LL) corresponde ao percurso  da  árvore  sintática  do  programa  a  partir  das  folhas  (representando  as  variáveis  ou símbolos não terminais da gramática que define a linguagem), até chegar à raiz (que representa a sequência de símbolos terminais da gramática). \nIII. Dada uma gramática LL(1) qualquer, se verifica que os lados direitos de qualquer par de regras dela não contêm prefixos não vazios em comum. Por exemplo, uma gramática com regras X -> abBc e Y -> ab não pode ser LL(1), pois o prefixo ab aparece nos lados direitos de ambas as regras. \nIV. Na  construção  de  tabelas  de  análise  sintática  LR,  podem  aparecer  três  tipos  de  conflitos: Conflitos Empilhar/Empilhar, Conflitos Empilhar/Reduzir e Conflitos Reduzir/Reduzir. \nV. Na  notação  de  gramáticas  LL(k)  e LR(k),  o  primeiro  símbolo  (L)  indica  que  a  entrada  é lida/processada da esquerda para a direita (Left-to-right). O segundo símbolo (L ou R) indica que a derivação implementada pelo algoritmo na construção/percurso da árvore sintática é mais à esquerda (L) ou mais à direita (R).",
     "alternatives": [
       {
         "a": "Apenas as assertivas I e V estão corretas."
@@ -1260,7 +1270,7 @@
   },
   {
     "id": 56,
-    "content": "O  algoritmo  de  ray  tracing  é  um  algoritmo  bastante  utilizado  para  gerar renderizações  fotorrealísticas. Sobre  o  ray  tracing,  analise  as  assertivas  abaixo  e  assinale  a alternativa correta. I. Atira raios da câmera virtual na direção do plano do filme para determinar se existem objetos que os intersectam. II. Utiliza a técnica de z-buffer para determinar se os objetos estão visíveis. III. É uma técnica muito eficiente na renderização de superfícies que têm materiais difusos. IV. Simula iluminação indireta através de raios secundários atirados em direções próximas à direção de reflexão do raio primário no objeto atingido.",
+    "content": "O  algoritmo  de  ray  tracing  é  um  algoritmo  bastante  utilizado  para  gerar renderizações  fotorrealísticas. Sobre  o  ray  tracing,  analise  as  assertivas  abaixo  e  assinale  a alternativa correta. \nI. Atira raios da câmera virtual na direção do plano do filme para determinar se existem objetos que os intersectam. \nII. Utiliza a técnica de z-buffer para determinar se os objetos estão visíveis. \nIII. É uma técnica muito eficiente na renderização de superfícies que têm materiais difusos. \nIV. Simula iluminação indireta através de raios secundários atirados em direções próximas à direção de reflexão do raio primário no objeto atingido.",
     "alternatives": [
       {
         "a": "Apenas I e III estão corretas."
@@ -1306,7 +1316,7 @@
   },
   {
     "id": 58,
-    "content": "Analise as seguintes assertivas sobre reúso no contexto de engenharia de software: I. Muitos  desenvolvedores  de  software  preferem  reescrever  eles  mesmos  seus  componentes porque acreditam  que  seu trabalho  será  de melhor qualidade,  se  comparado  à  adaptação  de componentes escritos por outros (síndrome do “Não inventado aqui”). II. O reúso pressupõe a existência de bibliotecas com componentes reutilizáveis. Criar, manter e assegurar que desenvolvedores de software usem essa biblioteca pode ser bastante custoso. III. Desenvolver softwares através  do  reúso,  por  tipicamente  adicionar  uma  complexidade  muito grande  ao  código,  exige  desenvolvedores  que  sejam  especialistas  em  reúso,  o  que  torna  o desenvolvimento baseado em reúso muito caro. Dentre as assertivas acima, quais representam fatores que comprometem o reúso de software?",
+    "content": "Analise as seguintes assertivas sobre reúso no contexto de engenharia de software: \nI. Muitos  desenvolvedores  de  software  preferem  reescrever  eles  mesmos  seus  componentes porque acreditam  que  seu trabalho  será  de melhor qualidade,  se  comparado  à  adaptação  de componentes escritos por outros (síndrome do “Não inventado aqui”). \nII. O reúso pressupõe a existência de bibliotecas com componentes reutilizáveis. Criar, manter e assegurar que desenvolvedores de software usem essa biblioteca pode ser bastante custoso. \nIII. Desenvolver softwares através  do  reúso,  por  tipicamente  adicionar  uma  complexidade  muito grande  ao  código,  exige  desenvolvedores  que  sejam  especialistas  em  reúso,  o  que  torna  o desenvolvimento baseado em reúso muito caro. \nDentre as assertivas acima, quais representam fatores que comprometem o reúso de software?",
     "alternatives": [
       {
         "a": "Apenas I."
@@ -1352,7 +1362,7 @@
   },
   {
     "id": 60,
-    "content": "Segundo  Sommerville  (2011),  requisitos  não  funcionais  (RNF)  podem  ser classificados como de produto, organizacional ou externo. Considere os seguintes RNF de produto: I. RNF1: “As interfaces projetadas para o sistema on-line devem funcionar nos navegadores Google Chrome e Safari”. II. RNF2: “Os funcionários devem poder usar todas as funções do sistema após quatro horas de treinamento. Espera-se que usuários treinados não façam mais que 2 erros em média por hora de uso”. III. RNF3: “Todos os pedidos feitos por usuários através da interface gráfica devem ter um tempo de resposta máximo de 1 segundo”. Entre os RNF de produto, está a usabilidade. São RNFs classificados como requisitos de usabilidade:",
+    "content": "Segundo  Sommerville  (2011),  requisitos  não  funcionais  (RNF)  podem  ser classificados como de produto, organizacional ou externo. Considere os seguintes RNF de produto: \nI. RNF1: “As interfaces projetadas para o sistema on-line devem funcionar nos navegadores Google Chrome e Safari”. \nII. RNF2: “Os funcionários devem poder usar todas as funções do sistema após quatro horas de treinamento. Espera-se que usuários treinados não façam mais que 2 erros em média por hora de uso”. \nIII. RNF3: “Todos os pedidos feitos por usuários através da interface gráfica devem ter um tempo de resposta máximo de 1 segundo”. \nEntre os RNF de produto, está a usabilidade. São RNFs classificados como requisitos de usabilidade:",
     "alternatives": [
       {
         "a": "Apenas I."
@@ -1421,7 +1431,7 @@
   },
   {
     "id": 63,
-    "content": "Em relação aos métodos de interpolação de intensidade de níveis de cinza ou cor de uma imagem, analise as assertivas abaixo e assinale V, se verdadeiras, ou F, se falsas. (  ) O método do vizinho mais próximo atribui a cada nova posição a intensidade de seu vizinho mais próximo na imagem original. O método pode causar distorções em detalhes finos ou criar formas serrilhadas em bordas retas de imagens. (  ) Na interpolação bilinear, os dois vizinhos mais próximos são utilizados para estimar a intensidade de uma dada posição. O método se baseia na média aritmética de distância desses pixels e causa borramento devido à sua característica de suavização. (  ) A interpolação bicúbica inclui os dezesseis vizinhos mais próximos de um ponto. Esse tipo de interpolação preserva detalhes finos na imagem. A ordem correta de preenchimento dos parênteses, de cima para baixo, é:",
+    "content": "Em relação aos métodos de interpolação de intensidade de níveis de cinza ou cor de uma imagem, analise as assertivas abaixo e assinale V, se verdadeiras, ou F, se falsas. \n(  ) O método do vizinho mais próximo atribui a cada nova posição a intensidade de seu vizinho mais próximo na imagem original. O método pode causar distorções em detalhes finos ou criar formas serrilhadas em bordas retas de imagens. \n(  ) Na interpolação bilinear, os dois vizinhos mais próximos são utilizados para estimar a intensidade de uma dada posição. O método se baseia na média aritmética de distância desses pixels e causa borramento devido à sua característica de suavização. \n(  ) A interpolação bicúbica inclui os dezesseis vizinhos mais próximos de um ponto. Esse tipo de interpolação preserva detalhes finos na imagem. \nA ordem correta de preenchimento dos parênteses, de cima para baixo, é:",
     "alternatives": [
       {
         "a": "F – F – V."
