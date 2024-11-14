@@ -265,9 +265,8 @@ class ExamManager {
 
   finishExam() {
     const correctAnswers = this.examData.reduce((acc, { id, gabarito }) => {
-      return acc + (localStorage.getItem(`answer-${id}`) === gabarito ? 1 : 0);
+      return acc + (localStorage.getItem(`answer-${id}`) === gabarito.toLowerCase() ? 1 : 0);
     }, 0);
-
 
     this.timer.stopCount()
     this.setTrueFinishExam()
