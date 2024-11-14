@@ -7,28 +7,34 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <script src="index.js"></script>
 </head>
-<body id="page-container" class="bg-gray-100 h-screen flex items-center justify-center">
+<body class="bg-gray-100 min-h-screen flex flex-col">
+  <div id="page-container" class="flex-grow flex flex-col items-center justify-center">
     <div class="max-w-lg w-full bg-white p-8 rounded-lg shadow-lg">
-        <h1 class="text-3xl font-bold text-gray-800 mb-4 text-center">POSCOMP-Lab</h1>
-        <p class="text-gray-600 mb-6 text-center">
-            Bem-vindo ao POSCOMP-Lab, seu simulador de exames do POSCOMP! Aqui você pode praticar com provas anteriores e se preparar para o exame de Computação. Escolha uma prova e clique para iniciar seu simulado.
-        </p>
-        <h2 class="text-xl font-semibold text-gray-700 mb-4">Provas Disponíveis</h2>
-        <ul class="space-y-4">
-            <li class="flex items-center justify-between bg-gray-100 p-4 rounded-lg">
-                <span class="text-gray-700">Prova POSCOMP 2022</span>
-                <button onclick="iniciarExame('2022')" class="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition duration-300">
-                    Iniciar
-                </button>
-            </li>
-            <!-- <li class="flex items-center justify-between bg-gray-100 p-4 rounded-lg">
-                <span class="text-gray-700">Prova Montada Aleatoriamente</span>
-                <button onclick="iniciarExame('aleatoria')" class="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition duration-300">
-                    Iniciar
-                </button>
-            </li> -->
-       </ul>
+      <h1 class="text-3xl font-bold text-gray-800 mb-4 text-center">POSCOMP-Lab</h1>
+      <p class="text-gray-600 mb-6 text-center">
+        Bem-vindo ao POSCOMP-Lab, seu simulador de exames do POSCOMP! Aqui você pode praticar com provas anteriores e se preparar para o exame de Computação. Escolha uma prova e clique para iniciar seu simulado.
+      </p>
+      <h2 class="text-xl font-semibold text-gray-700 mb-4">Provas Disponíveis</h2>
+      <ul class="space-y-4">
+        <li class="flex items-center justify-between bg-gray-100 p-4 rounded-lg">
+          <span class="text-gray-700">Prova POSCOMP 2022</span>
+          <button onclick="iniciarExame('2022')" class="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition duration-300">
+            Iniciar
+          </button>
+        </li>
+      </ul>
     </div>
+  </div>
+
+  <footer class="bg-gray-800 text-white text-center py-4">
+    <p class="text-sm">
+      Desenvolvido com ❤️ por
+      <a href="https://github.com/MatthewAraujo" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:underline">
+        Matthew Araujo
+      </a>
+    </p>
+    <p class="text-xs mt-1">&copy; 2024. Todos os direitos reservados.</p>
+  </footer>
 </body>
 </html>
 

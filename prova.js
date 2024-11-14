@@ -339,7 +339,6 @@ class QuestionRenderer extends ExamManager {
       <p class="text-lg font-semibold text-gray-800 mb-3">${this.question.id}. ${contentWithLineBreaks}</p>
     `;
 
-    // Verificar se há uma imagem e, se houver, adicionar ao contêiner antes das alternativas
     if (this.question.image) {
       const imageElement = document.createElement("img");
       imageElement.src = this.question.image;
@@ -348,13 +347,11 @@ class QuestionRenderer extends ExamManager {
       questionContainer.appendChild(imageElement);
     }
 
-    // Adicionar as alternativas após a imagem
     const alternativesContainer = document.createElement("ul");
     alternativesContainer.className = "space-y-2";
     alternativesContainer.innerHTML = this.renderAlternatives();
     questionContainer.appendChild(alternativesContainer);
 
-    // Verificar se a prova ainda não foi finalizada para renderizar o botão de salvar
     if (!this.examFinish) {
       const buttonContainer = document.createElement("div");
       buttonContainer.className = "flex justify-between mt-4";
@@ -368,7 +365,6 @@ class QuestionRenderer extends ExamManager {
       questionContainer.appendChild(buttonContainer);
     }
 
-    // Adicionar o contêiner de perguntas ao contêiner pai
     parentDiv.appendChild(questionContainer);
   }
 
