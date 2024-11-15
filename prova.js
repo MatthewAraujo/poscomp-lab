@@ -8,8 +8,8 @@ class ExamManager {
     this.timer
   }
 
-  async initialize(timerEnabled) {
-    await this.saveExam()
+  async initialize(timerEnabled, savedExam) {
+    if (savedExam) await this.saveExam()
 
     this.examData = await this.fetchExamData(this.examDate);
     this.renderBasePage(timerEnabled);
@@ -518,3 +518,16 @@ function startExam(withTimer = false) {
   const examManager = new ExamManager();
   examManager.initialize(withTimer);
 }
+
+window.addEventListener("load", () => {
+  console.log("Será?");
+
+  function initializeExamNow() {
+    const iniciate = window.sessionStorage.getItem("initialize");
+    return iniciate === "true";
+  }
+
+  const iniciate = initializeExamNow();
+  if (iniciate) startExam(true);
+});
+
