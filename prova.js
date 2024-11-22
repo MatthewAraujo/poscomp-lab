@@ -520,8 +520,6 @@ function startExam(withTimer = false) {
 }
 
 window.addEventListener("load", () => {
-  console.log("Será?");
-
   function initializeExamNow() {
     const iniciate = window.sessionStorage.getItem("initialize");
     return iniciate === "true";
