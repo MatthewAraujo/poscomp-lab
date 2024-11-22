@@ -1,5 +1,5 @@
 function iniciarExame(prova) {
-  window.location.href = `http://localhost/poscomp-lab/prova.html#${prova}`
+  window.location.href = `https://matthewaraujo.github.io/poscomp-lab/prova.html#${prova}`
 }
 
 function checkLocalStorage() {
